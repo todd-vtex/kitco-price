@@ -1,0 +1,5 @@
+{
+    "kitco-price": {
+        "component": "PriceUpdater"
+    }
+}

@@ -1,0 +1,1419 @@
+15:41:43.513 - [32minfo[39m: Running yarn in react  
+[2K[1G[1myarn install v1.22.10[22m[m
+[2K[1G[2m[1/4][22m Resolving packages...
+[2K[1G[32msuccess[39m Already up-to-date.
+[2K[1GDone in 0.16s.
+15:41:43.794 - [32minfo[39m: Finished running yarn  
+15:41:43.795 - [32minfo[39m: Linking app todddesantis.kitco-price@0.0.1  
+15:41:43.827 - [32minfo[39m: Sending 25 files   
+15:41:43.828 - [32minfo[39m: Link ID: 395baac77e2af773  
+15:41:43.828 - [32minfo[39m: Project size: 0.84MB  
+15:41:43.828 - [32minfo[39m: Compressing project files...  
+15:41:43.861 - [32minfo[39m: Compressed project size: 0.34MB  
+15:41:44.080 - [32minfo[39m: Sending files: 100% - 0.34MB/0.34MB  
+15:41:44.148 - [32minfo[39m: Build accepted for todddesantis.kitco-price@0.0.1 at todddesantis/todddev3 vtex.builder-hub@0.308.0  
+15:41:44.168 - [32minfo[39m: Starting build for app todddesantis.kitco-price@0.0.1 vtex.builder-hub@0.308.0  
+15:41:44.602 - [33mwarn[39m: Failed to generate graphql operation types vtex.builder-hub@0.308.0  
+15:41:44.712 - [33mwarn[39m: react builder overrode the following options in tsconfig.json:
+  jsx: [32m'react'[39m => [32m'preserve'[39m vtex.builder-hub@0.308.0  
+15:41:46.091 - [31merror[39m: App build failed. Waiting for changes...  
+15:41:46.166 - [31merror[39m: Webpack for react@3.x builder finished in 1328ms with errors:
+./react/PriceUpdater.tsx
+Module not found: Error: Can't resolve '@vtex/checkout-resources/CheckoutContext' in './react'
+resolve '@vtex/checkout-resources/CheckoutContext' in './react'
+  Parsed request is a module
+  using description file: ./react/package.json (relative path: .)
+    Field 'browser' doesn't contain a valid alias configuration
+    resolve as module
+      ./node_modules doesn't exist or is not a directory
+      /cache/link/link_todddesantis_todddev3/todddesantis.kitco-price@0.0.1/node_modules doesn't exist or is not a directory
+      /cache/link/link_todddesantis_todddev3/node_modules doesn't exist or is not a directory
+      /cache/link/node_modules doesn't exist or is not a directory
+      /cache/node_modules doesn't exist or is not a directory
+      /node_modules doesn't exist or is not a directory
+      looking for modules in ./react/node_modules
+        using description file: ./react/package.json (relative path: ./node_modules)
+          Field 'browser' doesn't contain a valid alias configuration
+          using description file: ./react/package.json (relative path: ./node_modules/@vtex/checkout-resources/CheckoutContext)
+            no extension
+              Field 'browser' doesn't contain a valid alias configuration
+              resolved symlink to ./node_modules/@vtex/checkout-resources/CheckoutContext
+                No description file found
+                no extension
+                  Field 'browser' doesn't contain a valid alias configuration
+                  ./node_modules/@vtex/checkout-resources/CheckoutContext doesn't exist
+                .mjs
+                  Field 'browser' doesn't contain a valid alias configuration
+                  ./node_modules/@vtex/checkout-resources/CheckoutContext.mjs doesn't exist
+                .js
+                  Field 'browser' doesn't contain a valid alias configuration
+                  ./node_modules/@vtex/checkout-resources/CheckoutContext.js doesn't exist
+                .jsx
+                  Field 'browser' doesn't contain a valid alias configuration
+                  ./node_modules/@vtex/checkout-resources/CheckoutContext.jsx doesn't exist
+                .tsx
+                  Field 'browser' doesn't contain a valid alias configuration
+                  ./node_modules/@vtex/checkout-resources/CheckoutContext.tsx doesn't exist
+                .ts
+                  Field 'browser' doesn't contain a valid alias configuration
+                  ./node_modules/@vtex/checkout-resources/CheckoutContext.ts doesn't exist
+                .d.ts
+                  Field 'browser' doesn't contain a valid alias configuration
+                  ./node_modules/@vtex/checkout-resources/CheckoutContext.d.ts doesn't exist
+                .css
+                  Field 'browser' doesn't contain a valid alias configuration
+                  ./node_modules/@vtex/checkout-resources/CheckoutContext.css doesn't exist
+                as directory
+                  ./node_modules/@vtex/checkout-resources/CheckoutContext doesn't exist
+              ./react/node_modules/@vtex/checkout-resources/CheckoutContext doesn't exist
+            .mjs
+              Field 'browser' doesn't contain a valid alias configuration
+              resolved symlink to ./node_modules/@vtex/checkout-resources/CheckoutContext.mjs
+                No description file found
+                no extension
+                  Field 'browser' doesn't contain a valid alias configuration
+                  ./node_modules/@vtex/checkout-resources/CheckoutContext.mjs doesn't exist
+                .mjs
+                  Field 'browser' doesn't contain a valid alias configuration
+                  ./node_modules/@vtex/checkout-resources/CheckoutContext.mjs.mjs doesn't exist
+                .js
+                  Field 'browser' doesn't contain a valid alias configuration
+                  ./node_modules/@vtex/checkout-resources/CheckoutContext.mjs.js doesn't exist
+                .jsx
+                  Field 'browser' doesn't contain a valid alias configuration
+                  ./node_modules/@vtex/checkout-resources/CheckoutContext.mjs.jsx doesn't exist
+                .tsx
+                  Field 'browser' doesn't contain a valid alias configuration
+                  ./node_modules/@vtex/checkout-resources/CheckoutContext.mjs.tsx doesn't exist
+                .ts
+                  Field 'browser' doesn't contain a valid alias configuration
+                  ./node_modules/@vtex/checkout-resources/CheckoutContext.mjs.ts doesn't exist
+                .d.ts
+                  Field 'browser' doesn't contain a valid alias configuration
+                  ./node_modules/@vtex/checkout-resources/CheckoutContext.mjs.d.ts doesn't exist
+                .css
+                  Field 'browser' doesn't contain a valid alias configuration
+                  ./node_modules/@vtex/checkout-resources/CheckoutContext.mjs.css doesn't exist
+                as directory
+                  ./node_modules/@vtex/checkout-resources/CheckoutContext.mjs doesn't exist
+              ./react/node_modules/@vtex/checkout-resources/CheckoutContext.mjs doesn't exist
+            .js
+              Field 'browser' doesn't contain a valid alias configuration
+              resolved symlink to ./node_modules/@vtex/checkout-resources/CheckoutContext.js
+                No description file found
+                no extension
+                  Field 'browser' doesn't contain a valid alias configuration
+                  ./node_modules/@vtex/checkout-resources/CheckoutContext.js doesn't exist
+                .mjs
+                  Field 'browser' doesn't contain a valid alias configuration
+                  ./node_modules/@vtex/checkout-resources/CheckoutContext.js.mjs doesn't exist
+                .js
+                  Field 'browser' doesn't contain a valid alias configuration
+                  ./node_modules/@vtex/checkout-resources/CheckoutContext.js.js doesn't exist
+                .jsx
+                  Field 'browser' doesn't contain a valid alias configuration
+                  ./node_modules/@vtex/checkout-resources/CheckoutContext.js.jsx doesn't exist
+                .tsx
+                  Field 'browser' doesn't contain a valid alias configuration
+                  ./node_modules/@vtex/checkout-resources/CheckoutContext.js.tsx doesn't exist
+                .ts
+                  Field 'browser' doesn't contain a valid alias configuration
+                  ./node_modules/@vtex/checkout-resources/CheckoutContext.js.ts doesn't exist
+                .d.ts
+                  Field 'browser' doesn't contain a valid alias configuration
+                  ./node_modules/@vtex/checkout-resources/CheckoutContext.js.d.ts doesn't exist
+                .css
+                  Field 'browser' doesn't contain a valid alias configuration
+                  ./node_modules/@vtex/checkout-resources/CheckoutContext.js.css doesn't exist
+                as directory
+                  ./node_modules/@vtex/checkout-resources/CheckoutContext.js doesn't exist
+              ./react/node_modules/@vtex/checkout-resources/CheckoutContext.js doesn't exist
+            .jsx
+              Field 'browser' doesn't contain a valid alias configuration
+              resolved symlink to ./node_modules/@vtex/checkout-resources/CheckoutContext.jsx
+                No description file found
+                no extension
+                  Field 'browser' doesn't contain a valid alias configuration
+                  ./node_modules/@vtex/checkout-resources/CheckoutContext.jsx doesn't exist
+                .mjs
+                  Field 'browser' doesn't contain a valid alias configuration
+                  ./node_modules/@vtex/checkout-resources/CheckoutContext.jsx.mjs doesn't exist
+                .js
+                  Field 'browser' doesn't contain a valid alias configuration
+                  ./node_modules/@vtex/checkout-resources/CheckoutContext.jsx.js doesn't exist
+                .jsx
+                  Field 'browser' doesn't contain a valid alias configuration
+                  ./node_modules/@vtex/checkout-resources/CheckoutContext.jsx.jsx doesn't exist
+                .tsx
+                  Field 'browser' doesn't contain a valid alias configuration
+                  ./node_modules/@vtex/checkout-resources/CheckoutContext.jsx.tsx doesn't exist
+                .ts
+                  Field 'browser' doesn't contain a valid alias configuration
+                  ./node_modules/@vtex/checkout-resources/CheckoutContext.jsx.ts doesn't exist
+                .d.ts
+                  Field 'browser' doesn't contain a valid alias configuration
+                  ./node_modules/@vtex/checkout-resources/CheckoutContext.jsx.d.ts doesn't exist
+                .css
+                  Field 'browser' doesn't contain a valid alias configuration
+                  ./node_modules/@vtex/checkout-resources/CheckoutContext.jsx.css doesn't exist
+                as directory
+                  ./node_modules/@vtex/checkout-resources/CheckoutContext.jsx doesn't exist
+              ./react/node_modules/@vtex/checkout-resources/CheckoutContext.jsx doesn't exist
+            .tsx
+              Field 'browser' doesn't contain a valid alias configuration
+              resolved symlink to ./node_modules/@vtex/checkout-resources/CheckoutContext.tsx
+                No description file found
+                no extension
+                  Field 'browser' doesn't contain a valid alias configuration
+                  ./node_modules/@vtex/checkout-resources/CheckoutContext.tsx doesn't exist
+                .mjs
+                  Field 'browser' doesn't contain a valid alias configuration
+                  ./node_modules/@vtex/checkout-resources/CheckoutContext.tsx.mjs doesn't exist
+                .js
+                  Field 'browser' doesn't contain a valid alias configuration
+                  ./node_modules/@vtex/checkout-resources/CheckoutContext.tsx.js doesn't exist
+                .jsx
+                  Field 'browser' doesn't contain a valid alias configuration
+                  ./node_modules/@vtex/checkout-resources/CheckoutContext.tsx.jsx doesn't exist
+                .tsx
+                  Field 'browser' doesn't contain a valid alias configuration
+                  ./node_modules/@vtex/checkout-resources/CheckoutContext.tsx.tsx doesn't exist
+                .ts
+                  Field 'browser' doesn't contain a valid alias configuration
+                  ./node_modules/@vtex/checkout-resources/CheckoutContext.tsx.ts doesn't exist
+                .d.ts
+                  Field 'browser' doesn't contain a valid alias configuration
+                  ./node_modules/@vtex/checkout-resources/CheckoutContext.tsx.d.ts doesn't exist
+                .css
+                  Field 'browser' doesn't contain a valid alias configuration
+                  ./node_modules/@vtex/checkout-resources/CheckoutContext.tsx.css doesn't exist
+                as directory
+                  ./node_modules/@vtex/checkout-resources/CheckoutContext.tsx doesn't exist
+              ./react/node_modules/@vtex/checkout-resources/CheckoutContext.tsx doesn't exist
+            .ts
+              Field 'browser' doesn't contain a valid alias configuration
+              resolved symlink to ./node_modules/@vtex/checkout-resources/CheckoutContext.ts
+                No description file found
+                no extension
+                  Field 'browser' doesn't contain a valid alias configuration
+                  ./node_modules/@vtex/checkout-resources/CheckoutContext.ts doesn't exist
+                .mjs
+                  Field 'browser' doesn't contain a valid alias configuration
+                  ./node_modules/@vtex/checkout-resources/CheckoutContext.ts.mjs doesn't exist
+                .js
+                  Field 'browser' doesn't contain a valid alias configuration
+                  ./node_modules/@vtex/checkout-resources/CheckoutContext.ts.js doesn't exist
+                .jsx
+                  Field 'browser' doesn't contain a valid alias configuration
+                  ./node_modules/@vtex/checkout-resources/CheckoutContext.ts.jsx doesn't exist
+                .tsx
+                  Field 'browser' doesn't contain a valid alias configuration
+                  ./node_modules/@vtex/checkout-resources/CheckoutContext.ts.tsx doesn't exist
+                .ts
+                  Field 'browser' doesn't contain a valid alias configuration
+                  ./node_modules/@vtex/checkout-resources/CheckoutContext.ts.ts doesn't exist
+                .d.ts
+                  Field 'browser' doesn't contain a valid alias configuration
+                  ./node_modules/@vtex/checkout-resources/CheckoutContext.ts.d.ts doesn't exist
+                .css
+                  Field 'browser' doesn't contain a valid alias configuration
+                  ./node_modules/@vtex/checkout-resources/CheckoutContext.ts.css doesn't exist
+                as directory
+                  ./node_modules/@vtex/checkout-resources/CheckoutContext.ts doesn't exist
+              ./react/node_modules/@vtex/checkout-resources/CheckoutContext.ts doesn't exist
+            .d.ts
+              Field 'browser' doesn't contain a valid alias configuration
+              resolved symlink to ./node_modules/@vtex/checkout-resources/CheckoutContext.d.ts
+                No description file found
+                no extension
+                  Field 'browser' doesn't contain a valid alias configuration
+                  ./node_modules/@vtex/checkout-resources/CheckoutContext.d.ts doesn't exist
+                .mjs
+                  Field 'browser' doesn't contain a valid alias configuration
+                  ./node_modules/@vtex/checkout-resources/CheckoutContext.d.ts.mjs doesn't exist
+                .js
+                  Field 'browser' doesn't contain a valid alias configuration
+                  ./node_modules/@vtex/checkout-resources/CheckoutContext.d.ts.js doesn't exist
+                .jsx
+                  Field 'browser' doesn't contain a valid alias configuration
+                  ./node_modules/@vtex/checkout-resources/CheckoutContext.d.ts.jsx doesn't exist
+                .tsx
+                  Field 'browser' doesn't contain a valid alias configuration
+                  ./node_modules/@vtex/checkout-resources/CheckoutContext.d.ts.tsx doesn't exist
+                .ts
+                  Field 'browser' doesn't contain a valid alias configuration
+                  ./node_modules/@vtex/checkout-resources/CheckoutContext.d.ts.ts doesn't exist
+                .d.ts
+                  Field 'browser' doesn't contain a valid alias configuration
+                  ./node_modules/@vtex/checkout-resources/CheckoutContext.d.ts.d.ts doesn't exist
+                .css
+                  Field 'browser' doesn't contain a valid alias configuration
+                  ./node_modules/@vtex/checkout-resources/CheckoutContext.d.ts.css doesn't exist
+                as directory
+                  ./node_modules/@vtex/checkout-resources/CheckoutContext.d.ts doesn't exist
+              ./react/node_modules/@vtex/checkout-resources/CheckoutContext.d.ts doesn't exist
+            .css
+              Field 'browser' doesn't contain a valid alias configuration
+              resolved symlink to ./node_modules/@vtex/checkout-resources/CheckoutContext.css
+                No description file found
+                no extension
+                  Field 'browser' doesn't contain a valid alias configuration
+                  ./node_modules/@vtex/checkout-resources/CheckoutContext.css doesn't exist
+                .mjs
+                  Field 'browser' doesn't contain a valid alias configuration
+                  ./node_modules/@vtex/checkout-resources/CheckoutContext.css.mjs doesn't exist
+                .js
+                  Field 'browser' doesn't contain a valid alias configuration
+                  ./node_modules/@vtex/checkout-resources/CheckoutContext.css.js doesn't exist
+                .jsx
+                  Field 'browser' doesn't contain a valid alias configuration
+                  ./node_modules/@vtex/checkout-resources/CheckoutContext.css.jsx doesn't exist
+                .tsx
+                  Field 'browser' doesn't contain a valid alias configuration
+                  ./node_modules/@vtex/checkout-resources/CheckoutContext.css.tsx doesn't exist
+                .ts
+                  Field 'browser' doesn't contain a valid alias configuration
+                  ./node_modules/@vtex/checkout-resources/CheckoutContext.css.ts doesn't exist
+                .d.ts
+                  Field 'browser' doesn't contain a valid alias configuration
+                  ./node_modules/@vtex/checkout-resources/CheckoutContext.css.d.ts doesn't exist
+                .css
+                  Field 'browser' doesn't contain a valid alias configuration
+                  ./node_modules/@vtex/checkout-resources/CheckoutContext.css.css doesn't exist
+                as directory
+                  ./node_modules/@vtex/checkout-resources/CheckoutContext.css doesn't exist
+              ./react/node_modules/@vtex/checkout-resources/CheckoutContext.css doesn't exist
+            as directory
+              ./react/node_modules/@vtex/checkout-resources/CheckoutContext doesn't exist
+[./node_modules]
+[/cache/link/link_todddesantis_todddev3/todddesantis.kitco-price@0.0.1/node_modules]
+[/cache/link/link_todddesantis_todddev3/node_modules]
+[/cache/link/node_modules]
+[/cache/node_modules]
+[/node_modules]
+[./node_modules/@vtex/checkout-resources/CheckoutContext/package.json]
+[./node_modules/@vtex/checkout-resources/CheckoutContext]
+[./node_modules/@vtex/checkout-resources/CheckoutContext.mjs]
+[./node_modules/@vtex/checkout-resources/CheckoutContext.js]
+[./node_modules/@vtex/checkout-resources/CheckoutContext.jsx]
+[./node_modules/@vtex/checkout-resources/CheckoutContext.tsx]
+[./node_modules/@vtex/checkout-resources/CheckoutContext.ts]
+[./node_modules/@vtex/checkout-resources/CheckoutContext.d.ts]
+[./node_modules/@vtex/checkout-resources/CheckoutContext.css]
+[./react/node_modules/@vtex/checkout-resources/CheckoutContext]
+[./node_modules/@vtex/checkout-resources/CheckoutContext.mjs/package.json]
+[./node_modules/@vtex/checkout-resources/CheckoutContext.mjs.mjs]
+[./node_modules/@vtex/checkout-resources/CheckoutContext.mjs.js]
+[./node_modules/@vtex/checkout-resources/CheckoutContext.mjs.jsx]
+[./node_modules/@vtex/checkout-resources/CheckoutContext.mjs.tsx]
+[./node_modules/@vtex/checkout-resources/CheckoutContext.mjs.ts]
+[./node_modules/@vtex/checkout-resources/CheckoutContext.mjs.d.ts]
+[./node_modules/@vtex/checkout-resources/CheckoutContext.mjs.css]
+[./react/node_modules/@vtex/checkout-resources/CheckoutContext.mjs]
+[./node_modules/@vtex/checkout-resources/CheckoutContext.js/package.json]
+[./node_modules/@vtex/checkout-resources/CheckoutContext.js.mjs]
+[./node_modules/@vtex/checkout-resources/CheckoutContext.js.js]
+[./node_modules/@vtex/checkout-resources/CheckoutContext.js.jsx]
+[./node_modules/@vtex/checkout-resources/CheckoutContext.js.tsx]
+[./node_modules/@vtex/checkout-resources/CheckoutContext.js.ts]
+[./node_modules/@vtex/checkout-resources/CheckoutContext.js.d.ts]
+[./node_modules/@vtex/checkout-resources/CheckoutContext.js.css]
+[./react/node_modules/@vtex/checkout-resources/CheckoutContext.js]
+[./node_modules/@vtex/checkout-resources/CheckoutContext.jsx/package.json]
+[./node_modules/@vtex/checkout-resources/CheckoutContext.jsx.mjs]
+[./node_modules/@vtex/checkout-resources/CheckoutContext.jsx.js]
+[./node_modules/@vtex/checkout-resources/CheckoutContext.jsx.jsx]
+[./node_modules/@vtex/checkout-resources/CheckoutContext.jsx.tsx]
+[./node_modules/@vtex/checkout-resources/CheckoutContext.jsx.ts]
+[./node_modules/@vtex/checkout-resources/CheckoutContext.jsx.d.ts]
+[./node_modules/@vtex/checkout-resources/CheckoutContext.jsx.css]
+[./react/node_modules/@vtex/checkout-resources/CheckoutContext.jsx]
+[./node_modules/@vtex/checkout-resources/CheckoutContext.tsx/package.json]
+[./node_modules/@vtex/checkout-resources/CheckoutContext.tsx.mjs]
+[./node_modules/@vtex/checkout-resources/CheckoutContext.tsx.js]
+[./node_modules/@vtex/checkout-resources/CheckoutContext.tsx.jsx]
+[./node_modules/@vtex/checkout-resources/CheckoutContext.tsx.tsx]
+[./node_modules/@vtex/checkout-resources/CheckoutContext.tsx.ts]
+[./node_modules/@vtex/checkout-resources/CheckoutContext.tsx.d.ts]
+[./node_modules/@vtex/checkout-resources/CheckoutContext.tsx.css]
+[./react/node_modules/@vtex/checkout-resources/CheckoutContext.tsx]
+[./node_modules/@vtex/checkout-resources/CheckoutContext.ts/package.json]
+[./node_modules/@vtex/checkout-resources/CheckoutContext.ts.mjs]
+[./node_modules/@vtex/checkout-resources/CheckoutContext.ts.js]
+[./node_modules/@vtex/checkout-resources/CheckoutContext.ts.jsx]
+[./node_modules/@vtex/checkout-resources/CheckoutContext.ts.tsx]
+[./node_modules/@vtex/checkout-resources/CheckoutContext.ts.ts]
+[./node_modules/@vtex/checkout-resources/CheckoutContext.ts.d.ts]
+[./node_modules/@vtex/checkout-resources/CheckoutContext.ts.css]
+[./react/node_modules/@vtex/checkout-resources/CheckoutContext.ts]
+[./node_modules/@vtex/checkout-resources/CheckoutContext.d.ts/package.json]
+[./node_modules/@vtex/checkout-resources/CheckoutContext.d.ts.mjs]
+[./node_modules/@vtex/checkout-resources/CheckoutContext.d.ts.js]
+[./node_modules/@vtex/checkout-resources/CheckoutContext.d.ts.jsx]
+[./node_modules/@vtex/checkout-resources/CheckoutContext.d.ts.tsx]
+[./node_modules/@vtex/checkout-resources/CheckoutContext.d.ts.ts]
+[./node_modules/@vtex/checkout-resources/CheckoutContext.d.ts.d.ts]
+[./node_modules/@vtex/checkout-resources/CheckoutContext.d.ts.css]
+[./react/node_modules/@vtex/checkout-resources/CheckoutContext.d.ts]
+[./node_modules/@vtex/checkout-resources/CheckoutContext.css/package.json]
+[./node_modules/@vtex/checkout-resources/CheckoutContext.css.mjs]
+[./node_modules/@vtex/checkout-resources/CheckoutContext.css.js]
+[./node_modules/@vtex/checkout-resources/CheckoutContext.css.jsx]
+[./node_modules/@vtex/checkout-resources/CheckoutContext.css.tsx]
+[./node_modules/@vtex/checkout-resources/CheckoutContext.css.ts]
+[./node_modules/@vtex/checkout-resources/CheckoutContext.css.d.ts]
+[./node_modules/@vtex/checkout-resources/CheckoutContext.css.css]
+[./react/node_modules/@vtex/checkout-resources/CheckoutContext.css]
+ @ ./react/PriceUpdater.tsx 5:0-71 16:21-32
+ @ ../PriceUpdater.js
+./react/PriceUpdater.tsx
+Module not found: Error: Can't resolve '@vtex/order-manager/OrderForm' in './react'
+resolve '@vtex/order-manager/OrderForm' in './react'
+  Parsed request is a module
+  using description file: ./react/package.json (relative path: .)
+    Field 'browser' doesn't contain a valid alias configuration
+    resolve as module
+      ./node_modules doesn't exist or is not a directory
+      /cache/link/link_todddesantis_todddev3/todddesantis.kitco-price@0.0.1/node_modules doesn't exist or is not a directory
+      /cache/link/link_todddesantis_todddev3/node_modules doesn't exist or is not a directory
+      /cache/link/node_modules doesn't exist or is not a directory
+      /cache/node_modules doesn't exist or is not a directory
+      /node_modules doesn't exist or is not a directory
+      looking for modules in ./react/node_modules
+        using description file: ./react/package.json (relative path: ./node_modules)
+          Field 'browser' doesn't contain a valid alias configuration
+          using description file: ./react/package.json (relative path: ./node_modules/@vtex/order-manager/OrderForm)
+            no extension
+              Field 'browser' doesn't contain a valid alias configuration
+              resolved symlink to ./node_modules/@vtex/order-manager/OrderForm
+                No description file found
+                no extension
+                  Field 'browser' doesn't contain a valid alias configuration
+                  ./node_modules/@vtex/order-manager/OrderForm doesn't exist
+                .mjs
+                  Field 'browser' doesn't contain a valid alias configuration
+                  ./node_modules/@vtex/order-manager/OrderForm.mjs doesn't exist
+                .js
+                  Field 'browser' doesn't contain a valid alias configuration
+                  ./node_modules/@vtex/order-manager/OrderForm.js doesn't exist
+                .jsx
+                  Field 'browser' doesn't contain a valid alias configuration
+                  ./node_modules/@vtex/order-manager/OrderForm.jsx doesn't exist
+                .tsx
+                  Field 'browser' doesn't contain a valid alias configuration
+                  ./node_modules/@vtex/order-manager/OrderForm.tsx doesn't exist
+                .ts
+                  Field 'browser' doesn't contain a valid alias configuration
+                  ./node_modules/@vtex/order-manager/OrderForm.ts doesn't exist
+                .d.ts
+                  Field 'browser' doesn't contain a valid alias configuration
+                  ./node_modules/@vtex/order-manager/OrderForm.d.ts doesn't exist
+                .css
+                  Field 'browser' doesn't contain a valid alias configuration
+                  ./node_modules/@vtex/order-manager/OrderForm.css doesn't exist
+                as directory
+                  ./node_modules/@vtex/order-manager/OrderForm doesn't exist
+              ./react/node_modules/@vtex/order-manager/OrderForm doesn't exist
+            .mjs
+              Field 'browser' doesn't contain a valid alias configuration
+              resolved symlink to ./node_modules/@vtex/order-manager/OrderForm.mjs
+                No description file found
+                no extension
+                  Field 'browser' doesn't contain a valid alias configuration
+                  ./node_modules/@vtex/order-manager/OrderForm.mjs doesn't exist
+                .mjs
+                  Field 'browser' doesn't contain a valid alias configuration
+                  ./node_modules/@vtex/order-manager/OrderForm.mjs.mjs doesn't exist
+                .js
+                  Field 'browser' doesn't contain a valid alias configuration
+                  ./node_modules/@vtex/order-manager/OrderForm.mjs.js doesn't exist
+                .jsx
+                  Field 'browser' doesn't contain a valid alias configuration
+                  ./node_modules/@vtex/order-manager/OrderForm.mjs.jsx doesn't exist
+                .tsx
+                  Field 'browser' doesn't contain a valid alias configuration
+                  ./node_modules/@vtex/order-manager/OrderForm.mjs.tsx doesn't exist
+                .ts
+                  Field 'browser' doesn't contain a valid alias configuration
+                  ./node_modules/@vtex/order-manager/OrderForm.mjs.ts doesn't exist
+                .d.ts
+                  Field 'browser' doesn't contain a valid alias configuration
+                  ./node_modules/@vtex/order-manager/OrderForm.mjs.d.ts doesn't exist
+                .css
+                  Field 'browser' doesn't contain a valid alias configuration
+                  ./node_modules/@vtex/order-manager/OrderForm.mjs.css doesn't exist
+                as directory
+                  ./node_modules/@vtex/order-manager/OrderForm.mjs doesn't exist
+              ./react/node_modules/@vtex/order-manager/OrderForm.mjs doesn't exist
+            .js
+              Field 'browser' doesn't contain a valid alias configuration
+              resolved symlink to ./node_modules/@vtex/order-manager/OrderForm.js
+                No description file found
+                no extension
+                  Field 'browser' doesn't contain a valid alias configuration
+                  ./node_modules/@vtex/order-manager/OrderForm.js doesn't exist
+                .mjs
+                  Field 'browser' doesn't contain a valid alias configuration
+                  ./node_modules/@vtex/order-manager/OrderForm.js.mjs doesn't exist
+                .js
+                  Field 'browser' doesn't contain a valid alias configuration
+                  ./node_modules/@vtex/order-manager/OrderForm.js.js doesn't exist
+                .jsx
+                  Field 'browser' doesn't contain a valid alias configuration
+                  ./node_modules/@vtex/order-manager/OrderForm.js.jsx doesn't exist
+                .tsx
+                  Field 'browser' doesn't contain a valid alias configuration
+                  ./node_modules/@vtex/order-manager/OrderForm.js.tsx doesn't exist
+                .ts
+                  Field 'browser' doesn't contain a valid alias configuration
+                  ./node_modules/@vtex/order-manager/OrderForm.js.ts doesn't exist
+                .d.ts
+                  Field 'browser' doesn't contain a valid alias configuration
+                  ./node_modules/@vtex/order-manager/OrderForm.js.d.ts doesn't exist
+                .css
+                  Field 'browser' doesn't contain a valid alias configuration
+                  ./node_modules/@vtex/order-manager/OrderForm.js.css doesn't exist
+                as directory
+                  ./node_modules/@vtex/order-manager/OrderForm.js doesn't exist
+              ./react/node_modules/@vtex/order-manager/OrderForm.js doesn't exist
+            .jsx
+              Field 'browser' doesn't contain a valid alias configuration
+              resolved symlink to ./node_modules/@vtex/order-manager/OrderForm.jsx
+                No description file found
+                no extension
+                  Field 'browser' doesn't contain a valid alias configuration
+                  ./node_modules/@vtex/order-manager/OrderForm.jsx doesn't exist
+                .mjs
+                  Field 'browser' doesn't contain a valid alias configuration
+                  ./node_modules/@vtex/order-manager/OrderForm.jsx.mjs doesn't exist
+                .js
+                  Field 'browser' doesn't contain a valid alias configuration
+                  ./node_modules/@vtex/order-manager/OrderForm.jsx.js doesn't exist
+                .jsx
+                  Field 'browser' doesn't contain a valid alias configuration
+                  ./node_modules/@vtex/order-manager/OrderForm.jsx.jsx doesn't exist
+                .tsx
+                  Field 'browser' doesn't contain a valid alias configuration
+                  ./node_modules/@vtex/order-manager/OrderForm.jsx.tsx doesn't exist
+                .ts
+                  Field 'browser' doesn't contain a valid alias configuration
+                  ./node_modules/@vtex/order-manager/OrderForm.jsx.ts doesn't exist
+                .d.ts
+                  Field 'browser' doesn't contain a valid alias configuration
+                  ./node_modules/@vtex/order-manager/OrderForm.jsx.d.ts doesn't exist
+                .css
+                  Field 'browser' doesn't contain a valid alias configuration
+                  ./node_modules/@vtex/order-manager/OrderForm.jsx.css doesn't exist
+                as directory
+                  ./node_modules/@vtex/order-manager/OrderForm.jsx doesn't exist
+              ./react/node_modules/@vtex/order-manager/OrderForm.jsx doesn't exist
+            .tsx
+              Field 'browser' doesn't contain a valid alias configuration
+              resolved symlink to ./node_modules/@vtex/order-manager/OrderForm.tsx
+                No description file found
+                no extension
+                  Field 'browser' doesn't contain a valid alias configuration
+                  ./node_modules/@vtex/order-manager/OrderForm.tsx doesn't exist
+                .mjs
+                  Field 'browser' doesn't contain a valid alias configuration
+                  ./node_modules/@vtex/order-manager/OrderForm.tsx.mjs doesn't exist
+                .js
+                  Field 'browser' doesn't contain a valid alias configuration
+                  ./node_modules/@vtex/order-manager/OrderForm.tsx.js doesn't exist
+                .jsx
+                  Field 'browser' doesn't contain a valid alias configuration
+                  ./node_modules/@vtex/order-manager/OrderForm.tsx.jsx doesn't exist
+                .tsx
+                  Field 'browser' doesn't contain a valid alias configuration
+                  ./node_modules/@vtex/order-manager/OrderForm.tsx.tsx doesn't exist
+                .ts
+                  Field 'browser' doesn't contain a valid alias configuration
+                  ./node_modules/@vtex/order-manager/OrderForm.tsx.ts doesn't exist
+                .d.ts
+                  Field 'browser' doesn't contain a valid alias configuration
+                  ./node_modules/@vtex/order-manager/OrderForm.tsx.d.ts doesn't exist
+                .css
+                  Field 'browser' doesn't contain a valid alias configuration
+                  ./node_modules/@vtex/order-manager/OrderForm.tsx.css doesn't exist
+                as directory
+                  ./node_modules/@vtex/order-manager/OrderForm.tsx doesn't exist
+              ./react/node_modules/@vtex/order-manager/OrderForm.tsx doesn't exist
+            .ts
+              Field 'browser' doesn't contain a valid alias configuration
+              resolved symlink to ./node_modules/@vtex/order-manager/OrderForm.ts
+                No description file found
+                no extension
+                  Field 'browser' doesn't contain a valid alias configuration
+                  ./node_modules/@vtex/order-manager/OrderForm.ts doesn't exist
+                .mjs
+                  Field 'browser' doesn't contain a valid alias configuration
+                  ./node_modules/@vtex/order-manager/OrderForm.ts.mjs doesn't exist
+                .js
+                  Field 'browser' doesn't contain a valid alias configuration
+                  ./node_modules/@vtex/order-manager/OrderForm.ts.js doesn't exist
+                .jsx
+                  Field 'browser' doesn't contain a valid alias configuration
+                  ./node_modules/@vtex/order-manager/OrderForm.ts.jsx doesn't exist
+                .tsx
+                  Field 'browser' doesn't contain a valid alias configuration
+                  ./node_modules/@vtex/order-manager/OrderForm.ts.tsx doesn't exist
+                .ts
+                  Field 'browser' doesn't contain a valid alias configuration
+                  ./node_modules/@vtex/order-manager/OrderForm.ts.ts doesn't exist
+                .d.ts
+                  Field 'browser' doesn't contain a valid alias configuration
+                  ./node_modules/@vtex/order-manager/OrderForm.ts.d.ts doesn't exist
+                .css
+                  Field 'browser' doesn't contain a valid alias configuration
+                  ./node_modules/@vtex/order-manager/OrderForm.ts.css doesn't exist
+                as directory
+                  ./node_modules/@vtex/order-manager/OrderForm.ts doesn't exist
+              ./react/node_modules/@vtex/order-manager/OrderForm.ts doesn't exist
+            .d.ts
+              Field 'browser' doesn't contain a valid alias configuration
+              resolved symlink to ./node_modules/@vtex/order-manager/OrderForm.d.ts
+                No description file found
+                no extension
+                  Field 'browser' doesn't contain a valid alias configuration
+                  ./node_modules/@vtex/order-manager/OrderForm.d.ts doesn't exist
+                .mjs
+                  Field 'browser' doesn't contain a valid alias configuration
+                  ./node_modules/@vtex/order-manager/OrderForm.d.ts.mjs doesn't exist
+                .js
+                  Field 'browser' doesn't contain a valid alias configuration
+                  ./node_modules/@vtex/order-manager/OrderForm.d.ts.js doesn't exist
+                .jsx
+                  Field 'browser' doesn't contain a valid alias configuration
+                  ./node_modules/@vtex/order-manager/OrderForm.d.ts.jsx doesn't exist
+                .tsx
+                  Field 'browser' doesn't contain a valid alias configuration
+                  ./node_modules/@vtex/order-manager/OrderForm.d.ts.tsx doesn't exist
+                .ts
+                  Field 'browser' doesn't contain a valid alias configuration
+                  ./node_modules/@vtex/order-manager/OrderForm.d.ts.ts doesn't exist
+                .d.ts
+                  Field 'browser' doesn't contain a valid alias configuration
+                  ./node_modules/@vtex/order-manager/OrderForm.d.ts.d.ts doesn't exist
+                .css
+                  Field 'browser' doesn't contain a valid alias configuration
+                  ./node_modules/@vtex/order-manager/OrderForm.d.ts.css doesn't exist
+                as directory
+                  ./node_modules/@vtex/order-manager/OrderForm.d.ts doesn't exist
+              ./react/node_modules/@vtex/order-manager/OrderForm.d.ts doesn't exist
+            .css
+              Field 'browser' doesn't contain a valid alias configuration
+              resolved symlink to ./node_modules/@vtex/order-manager/OrderForm.css
+                No description file found
+                no extension
+                  Field 'browser' doesn't contain a valid alias configuration
+                  ./node_modules/@vtex/order-manager/OrderForm.css doesn't exist
+                .mjs
+                  Field 'browser' doesn't contain a valid alias configuration
+                  ./node_modules/@vtex/order-manager/OrderForm.css.mjs doesn't exist
+                .js
+                  Field 'browser' doesn't contain a valid alias configuration
+                  ./node_modules/@vtex/order-manager/OrderForm.css.js doesn't exist
+                .jsx
+                  Field 'browser' doesn't contain a valid alias configuration
+                  ./node_modules/@vtex/order-manager/OrderForm.css.jsx doesn't exist
+                .tsx
+                  Field 'browser' doesn't contain a valid alias configuration
+                  ./node_modules/@vtex/order-manager/OrderForm.css.tsx doesn't exist
+                .ts
+                  Field 'browser' doesn't contain a valid alias configuration
+                  ./node_modules/@vtex/order-manager/OrderForm.css.ts doesn't exist
+                .d.ts
+                  Field 'browser' doesn't contain a valid alias configuration
+                  ./node_modules/@vtex/order-manager/OrderForm.css.d.ts doesn't exist
+                .css
+                  Field 'browser' doesn't contain a valid alias configuration
+                  ./node_modules/@vtex/order-manager/OrderForm.css.css doesn't exist
+                as directory
+                  ./node_modules/@vtex/order-manager/OrderForm.css doesn't exist
+              ./react/node_modules/@vtex/order-manager/OrderForm.css doesn't exist
+            as directory
+              ./react/node_modules/@vtex/order-manager/OrderForm doesn't exist
+[./node_modules]
+[/cache/link/link_todddesantis_todddev3/todddesantis.kitco-price@0.0.1/node_modules]
+[/cache/link/link_todddesantis_todddev3/node_modules]
+[/cache/link/node_modules]
+[/cache/node_modules]
+[/node_modules]
+[./node_modules/@vtex/order-manager/OrderForm/package.json]
+[./node_modules/@vtex/order-manager/OrderForm]
+[./node_modules/@vtex/order-manager/OrderForm.mjs]
+[./node_modules/@vtex/order-manager/OrderForm.js]
+[./node_modules/@vtex/order-manager/OrderForm.jsx]
+[./node_modules/@vtex/order-manager/OrderForm.tsx]
+[./node_modules/@vtex/order-manager/OrderForm.ts]
+[./node_modules/@vtex/order-manager/OrderForm.d.ts]
+[./node_modules/@vtex/order-manager/OrderForm.css]
+[./react/node_modules/@vtex/order-manager/OrderForm]
+[./node_modules/@vtex/order-manager/OrderForm.mjs/package.json]
+[./node_modules/@vtex/order-manager/OrderForm.mjs.mjs]
+[./node_modules/@vtex/order-manager/OrderForm.mjs.js]
+[./node_modules/@vtex/order-manager/OrderForm.mjs.jsx]
+[./node_modules/@vtex/order-manager/OrderForm.mjs.tsx]
+[./node_modules/@vtex/order-manager/OrderForm.mjs.ts]
+[./node_modules/@vtex/order-manager/OrderForm.mjs.d.ts]
+[./node_modules/@vtex/order-manager/OrderForm.mjs.css]
+[./react/node_modules/@vtex/order-manager/OrderForm.mjs]
+[./node_modules/@vtex/order-manager/OrderForm.js/package.json]
+[./node_modules/@vtex/order-manager/OrderForm.js.mjs]
+[./node_modules/@vtex/order-manager/OrderForm.js.js]
+[./node_modules/@vtex/order-manager/OrderForm.js.jsx]
+[./node_modules/@vtex/order-manager/OrderForm.js.tsx]
+[./node_modules/@vtex/order-manager/OrderForm.js.ts]
+[./node_modules/@vtex/order-manager/OrderForm.js.d.ts]
+[./node_modules/@vtex/order-manager/OrderForm.js.css]
+[./react/node_modules/@vtex/order-manager/OrderForm.js]
+[./node_modules/@vtex/order-manager/OrderForm.jsx/package.json]
+[./node_modules/@vtex/order-manager/OrderForm.jsx.mjs]
+[./node_modules/@vtex/order-manager/OrderForm.jsx.js]
+[./node_modules/@vtex/order-manager/OrderForm.jsx.jsx]
+[./node_modules/@vtex/order-manager/OrderForm.jsx.tsx]
+[./node_modules/@vtex/order-manager/OrderForm.jsx.ts]
+[./node_modules/@vtex/order-manager/OrderForm.jsx.d.ts]
+[./node_modules/@vtex/order-manager/OrderForm.jsx.css]
+[./react/node_modules/@vtex/order-manager/OrderForm.jsx]
+[./node_modules/@vtex/order-manager/OrderForm.tsx/package.json]
+[./node_modules/@vtex/order-manager/OrderForm.tsx.mjs]
+[./node_modules/@vtex/order-manager/OrderForm.tsx.js]
+[./node_modules/@vtex/order-manager/OrderForm.tsx.jsx]
+[./node_modules/@vtex/order-manager/OrderForm.tsx.tsx]
+[./node_modules/@vtex/order-manager/OrderForm.tsx.ts]
+[./node_modules/@vtex/order-manager/OrderForm.tsx.d.ts]
+[./node_modules/@vtex/order-manager/OrderForm.tsx.css]
+[./react/node_modules/@vtex/order-manager/OrderForm.tsx]
+[./node_modules/@vtex/order-manager/OrderForm.ts/package.json]
+[./node_modules/@vtex/order-manager/OrderForm.ts.mjs]
+[./node_modules/@vtex/order-manager/OrderForm.ts.js]
+[./node_modules/@vtex/order-manager/OrderForm.ts.jsx]
+[./node_modules/@vtex/order-manager/OrderForm.ts.tsx]
+[./node_modules/@vtex/order-manager/OrderForm.ts.ts]
+[./node_modules/@vtex/order-manager/OrderForm.ts.d.ts]
+[./node_modules/@vtex/order-manager/OrderForm.ts.css]
+[./react/node_modules/@vtex/order-manager/OrderForm.ts]
+[./node_modules/@vtex/order-manager/OrderForm.d.ts/package.json]
+[./node_modules/@vtex/order-manager/OrderForm.d.ts.mjs]
+[./node_modules/@vtex/order-manager/OrderForm.d.ts.js]
+[./node_modules/@vtex/order-manager/OrderForm.d.ts.jsx]
+[./node_modules/@vtex/order-manager/OrderForm.d.ts.tsx]
+[./node_modules/@vtex/order-manager/OrderForm.d.ts.ts]
+[./node_modules/@vtex/order-manager/OrderForm.d.ts.d.ts]
+[./node_modules/@vtex/order-manager/OrderForm.d.ts.css]
+[./react/node_modules/@vtex/order-manager/OrderForm.d.ts]
+[./node_modules/@vtex/order-manager/OrderForm.css/package.json]
+[./node_modules/@vtex/order-manager/OrderForm.css.mjs]
+[./node_modules/@vtex/order-manager/OrderForm.css.js]
+[./node_modules/@vtex/order-manager/OrderForm.css.jsx]
+[./node_modules/@vtex/order-manager/OrderForm.css.tsx]
+[./node_modules/@vtex/order-manager/OrderForm.css.ts]
+[./node_modules/@vtex/order-manager/OrderForm.css.d.ts]
+[./node_modules/@vtex/order-manager/OrderForm.css.css]
+[./react/node_modules/@vtex/order-manager/OrderForm.css]
+ @ ./react/PriceUpdater.tsx 4:0-61 12:22-34
+ @ ../PriceUpdater.js
+./react/PriceUpdater.tsx
+Module not found: Error: Can't resolve '@vtex/product-context' in './react'
+resolve '@vtex/product-context' in './react'
+  Parsed request is a module
+  using description file: ./react/package.json (relative path: .)
+    Field 'browser' doesn't contain a valid alias configuration
+    resolve as module
+      ./node_modules doesn't exist or is not a directory
+      /cache/link/link_todddesantis_todddev3/todddesantis.kitco-price@0.0.1/node_modules doesn't exist or is not a directory
+      /cache/link/link_todddesantis_todddev3/node_modules doesn't exist or is not a directory
+      /cache/link/node_modules doesn't exist or is not a directory
+      /cache/node_modules doesn't exist or is not a directory
+      /node_modules doesn't exist or is not a directory
+      looking for modules in ./react/node_modules
+        using description file: ./react/package.json (relative path: ./node_modules)
+          Field 'browser' doesn't contain a valid alias configuration
+          using description file: ./react/package.json (relative path: ./node_modules/@vtex/product-context)
+            no extension
+              Field 'browser' doesn't contain a valid alias configuration
+              resolved symlink to ./node_modules/@vtex/product-context
+                No description file found
+                no extension
+                  Field 'browser' doesn't contain a valid alias configuration
+                  ./node_modules/@vtex/product-context doesn't exist
+                .mjs
+                  Field 'browser' doesn't contain a valid alias configuration
+                  ./node_modules/@vtex/product-context.mjs doesn't exist
+                .js
+                  Field 'browser' doesn't contain a valid alias configuration
+                  ./node_modules/@vtex/product-context.js doesn't exist
+                .jsx
+                  Field 'browser' doesn't contain a valid alias configuration
+                  ./node_modules/@vtex/product-context.jsx doesn't exist
+                .tsx
+                  Field 'browser' doesn't contain a valid alias configuration
+                  ./node_modules/@vtex/product-context.tsx doesn't exist
+                .ts
+                  Field 'browser' doesn't contain a valid alias configuration
+                  ./node_modules/@vtex/product-context.ts doesn't exist
+                .d.ts
+                  Field 'browser' doesn't contain a valid alias configuration
+                  ./node_modules/@vtex/product-context.d.ts doesn't exist
+                .css
+                  Field 'browser' doesn't contain a valid alias configuration
+                  ./node_modules/@vtex/product-context.css doesn't exist
+                as directory
+                  ./node_modules/@vtex/product-context doesn't exist
+              ./react/node_modules/@vtex/product-context doesn't exist
+            .mjs
+              Field 'browser' doesn't contain a valid alias configuration
+              resolved symlink to ./node_modules/@vtex/product-context.mjs
+                No description file found
+                no extension
+                  Field 'browser' doesn't contain a valid alias configuration
+                  ./node_modules/@vtex/product-context.mjs doesn't exist
+                .mjs
+                  Field 'browser' doesn't contain a valid alias configuration
+                  ./node_modules/@vtex/product-context.mjs.mjs doesn't exist
+                .js
+                  Field 'browser' doesn't contain a valid alias configuration
+                  ./node_modules/@vtex/product-context.mjs.js doesn't exist
+                .jsx
+                  Field 'browser' doesn't contain a valid alias configuration
+                  ./node_modules/@vtex/product-context.mjs.jsx doesn't exist
+                .tsx
+                  Field 'browser' doesn't contain a valid alias configuration
+                  ./node_modules/@vtex/product-context.mjs.tsx doesn't exist
+                .ts
+                  Field 'browser' doesn't contain a valid alias configuration
+                  ./node_modules/@vtex/product-context.mjs.ts doesn't exist
+                .d.ts
+                  Field 'browser' doesn't contain a valid alias configuration
+                  ./node_modules/@vtex/product-context.mjs.d.ts doesn't exist
+                .css
+                  Field 'browser' doesn't contain a valid alias configuration
+                  ./node_modules/@vtex/product-context.mjs.css doesn't exist
+                as directory
+                  ./node_modules/@vtex/product-context.mjs doesn't exist
+              ./react/node_modules/@vtex/product-context.mjs doesn't exist
+            .js
+              Field 'browser' doesn't contain a valid alias configuration
+              resolved symlink to ./node_modules/@vtex/product-context.js
+                No description file found
+                no extension
+                  Field 'browser' doesn't contain a valid alias configuration
+                  ./node_modules/@vtex/product-context.js doesn't exist
+                .mjs
+                  Field 'browser' doesn't contain a valid alias configuration
+                  ./node_modules/@vtex/product-context.js.mjs doesn't exist
+                .js
+                  Field 'browser' doesn't contain a valid alias configuration
+                  ./node_modules/@vtex/product-context.js.js doesn't exist
+                .jsx
+                  Field 'browser' doesn't contain a valid alias configuration
+                  ./node_modules/@vtex/product-context.js.jsx doesn't exist
+                .tsx
+                  Field 'browser' doesn't contain a valid alias configuration
+                  ./node_modules/@vtex/product-context.js.tsx doesn't exist
+                .ts
+                  Field 'browser' doesn't contain a valid alias configuration
+                  ./node_modules/@vtex/product-context.js.ts doesn't exist
+                .d.ts
+                  Field 'browser' doesn't contain a valid alias configuration
+                  ./node_modules/@vtex/product-context.js.d.ts doesn't exist
+                .css
+                  Field 'browser' doesn't contain a valid alias configuration
+                  ./node_modules/@vtex/product-context.js.css doesn't exist
+                as directory
+                  ./node_modules/@vtex/product-context.js doesn't exist
+              ./react/node_modules/@vtex/product-context.js doesn't exist
+            .jsx
+              Field 'browser' doesn't contain a valid alias configuration
+              resolved symlink to ./node_modules/@vtex/product-context.jsx
+                No description file found
+                no extension
+                  Field 'browser' doesn't contain a valid alias configuration
+                  ./node_modules/@vtex/product-context.jsx doesn't exist
+                .mjs
+                  Field 'browser' doesn't contain a valid alias configuration
+                  ./node_modules/@vtex/product-context.jsx.mjs doesn't exist
+                .js
+                  Field 'browser' doesn't contain a valid alias configuration
+                  ./node_modules/@vtex/product-context.jsx.js doesn't exist
+                .jsx
+                  Field 'browser' doesn't contain a valid alias configuration
+                  ./node_modules/@vtex/product-context.jsx.jsx doesn't exist
+                .tsx
+                  Field 'browser' doesn't contain a valid alias configuration
+                  ./node_modules/@vtex/product-context.jsx.tsx doesn't exist
+                .ts
+                  Field 'browser' doesn't contain a valid alias configuration
+                  ./node_modules/@vtex/product-context.jsx.ts doesn't exist
+                .d.ts
+                  Field 'browser' doesn't contain a valid alias configuration
+                  ./node_modules/@vtex/product-context.jsx.d.ts doesn't exist
+                .css
+                  Field 'browser' doesn't contain a valid alias configuration
+                  ./node_modules/@vtex/product-context.jsx.css doesn't exist
+                as directory
+                  ./node_modules/@vtex/product-context.jsx doesn't exist
+              ./react/node_modules/@vtex/product-context.jsx doesn't exist
+            .tsx
+              Field 'browser' doesn't contain a valid alias configuration
+              resolved symlink to ./node_modules/@vtex/product-context.tsx
+                No description file found
+                no extension
+                  Field 'browser' doesn't contain a valid alias configuration
+                  ./node_modules/@vtex/product-context.tsx doesn't exist
+                .mjs
+                  Field 'browser' doesn't contain a valid alias configuration
+                  ./node_modules/@vtex/product-context.tsx.mjs doesn't exist
+                .js
+                  Field 'browser' doesn't contain a valid alias configuration
+                  ./node_modules/@vtex/product-context.tsx.js doesn't exist
+                .jsx
+                  Field 'browser' doesn't contain a valid alias configuration
+                  ./node_modules/@vtex/product-context.tsx.jsx doesn't exist
+                .tsx
+                  Field 'browser' doesn't contain a valid alias configuration
+                  ./node_modules/@vtex/product-context.tsx.tsx doesn't exist
+                .ts
+                  Field 'browser' doesn't contain a valid alias configuration
+                  ./node_modules/@vtex/product-context.tsx.ts doesn't exist
+                .d.ts
+                  Field 'browser' doesn't contain a valid alias configuration
+                  ./node_modules/@vtex/product-context.tsx.d.ts doesn't exist
+                .css
+                  Field 'browser' doesn't contain a valid alias configuration
+                  ./node_modules/@vtex/product-context.tsx.css doesn't exist
+                as directory
+                  ./node_modules/@vtex/product-context.tsx doesn't exist
+              ./react/node_modules/@vtex/product-context.tsx doesn't exist
+            .ts
+              Field 'browser' doesn't contain a valid alias configuration
+              resolved symlink to ./node_modules/@vtex/product-context.ts
+                No description file found
+                no extension
+                  Field 'browser' doesn't contain a valid alias configuration
+                  ./node_modules/@vtex/product-context.ts doesn't exist
+                .mjs
+                  Field 'browser' doesn't contain a valid alias configuration
+                  ./node_modules/@vtex/product-context.ts.mjs doesn't exist
+                .js
+                  Field 'browser' doesn't contain a valid alias configuration
+                  ./node_modules/@vtex/product-context.ts.js doesn't exist
+                .jsx
+                  Field 'browser' doesn't contain a valid alias configuration
+                  ./node_modules/@vtex/product-context.ts.jsx doesn't exist
+                .tsx
+                  Field 'browser' doesn't contain a valid alias configuration
+                  ./node_modules/@vtex/product-context.ts.tsx doesn't exist
+                .ts
+                  Field 'browser' doesn't contain a valid alias configuration
+                  ./node_modules/@vtex/product-context.ts.ts doesn't exist
+                .d.ts
+                  Field 'browser' doesn't contain a valid alias configuration
+                  ./node_modules/@vtex/product-context.ts.d.ts doesn't exist
+                .css
+                  Field 'browser' doesn't contain a valid alias configuration
+                  ./node_modules/@vtex/product-context.ts.css doesn't exist
+                as directory
+                  ./node_modules/@vtex/product-context.ts doesn't exist
+              ./react/node_modules/@vtex/product-context.ts doesn't exist
+            .d.ts
+              Field 'browser' doesn't contain a valid alias configuration
+              resolved symlink to ./node_modules/@vtex/product-context.d.ts
+                No description file found
+                no extension
+                  Field 'browser' doesn't contain a valid alias configuration
+                  ./node_modules/@vtex/product-context.d.ts doesn't exist
+                .mjs
+                  Field 'browser' doesn't contain a valid alias configuration
+                  ./node_modules/@vtex/product-context.d.ts.mjs doesn't exist
+                .js
+                  Field 'browser' doesn't contain a valid alias configuration
+                  ./node_modules/@vtex/product-context.d.ts.js doesn't exist
+                .jsx
+                  Field 'browser' doesn't contain a valid alias configuration
+                  ./node_modules/@vtex/product-context.d.ts.jsx doesn't exist
+                .tsx
+                  Field 'browser' doesn't contain a valid alias configuration
+                  ./node_modules/@vtex/product-context.d.ts.tsx doesn't exist
+                .ts
+                  Field 'browser' doesn't contain a valid alias configuration
+                  ./node_modules/@vtex/product-context.d.ts.ts doesn't exist
+                .d.ts
+                  Field 'browser' doesn't contain a valid alias configuration
+                  ./node_modules/@vtex/product-context.d.ts.d.ts doesn't exist
+                .css
+                  Field 'browser' doesn't contain a valid alias configuration
+                  ./node_modules/@vtex/product-context.d.ts.css doesn't exist
+                as directory
+                  ./node_modules/@vtex/product-context.d.ts doesn't exist
+              ./react/node_modules/@vtex/product-context.d.ts doesn't exist
+            .css
+              Field 'browser' doesn't contain a valid alias configuration
+              resolved symlink to ./node_modules/@vtex/product-context.css
+                No description file found
+                no extension
+                  Field 'browser' doesn't contain a valid alias configuration
+                  ./node_modules/@vtex/product-context.css doesn't exist
+                .mjs
+                  Field 'browser' doesn't contain a valid alias configuration
+                  ./node_modules/@vtex/product-context.css.mjs doesn't exist
+                .js
+                  Field 'browser' doesn't contain a valid alias configuration
+                  ./node_modules/@vtex/product-context.css.js doesn't exist
+                .jsx
+                  Field 'browser' doesn't contain a valid alias configuration
+                  ./node_modules/@vtex/product-context.css.jsx doesn't exist
+                .tsx
+                  Field 'browser' doesn't contain a valid alias configuration
+                  ./node_modules/@vtex/product-context.css.tsx doesn't exist
+                .ts
+                  Field 'browser' doesn't contain a valid alias configuration
+                  ./node_modules/@vtex/product-context.css.ts doesn't exist
+                .d.ts
+                  Field 'browser' doesn't contain a valid alias configuration
+                  ./node_modules/@vtex/product-context.css.d.ts doesn't exist
+                .css
+                  Field 'browser' doesn't contain a valid alias configuration
+                  ./node_modules/@vtex/product-context.css.css doesn't exist
+                as directory
+                  ./node_modules/@vtex/product-context.css doesn't exist
+              ./react/node_modules/@vtex/product-context.css doesn't exist
+            as directory
+              ./react/node_modules/@vtex/product-context doesn't exist
+[./node_modules]
+[/cache/link/link_todddesantis_todddev3/todddesantis.kitco-price@0.0.1/node_modules]
+[/cache/link/link_todddesantis_todddev3/node_modules]
+[/cache/link/node_modules]
+[/cache/node_modules]
+[/node_modules]
+[./node_modules/@vtex/product-context/package.json]
+[./node_modules/@vtex/product-context]
+[./node_modules/@vtex/product-context.mjs]
+[./node_modules/@vtex/product-context.js]
+[./node_modules/@vtex/product-context.jsx]
+[./node_modules/@vtex/product-context.tsx]
+[./node_modules/@vtex/product-context.ts]
+[./node_modules/@vtex/product-context.d.ts]
+[./node_modules/@vtex/product-context.css]
+[./react/node_modules/@vtex/product-context]
+[./node_modules/@vtex/product-context.mjs/package.json]
+[./node_modules/@vtex/product-context.mjs.mjs]
+[./node_modules/@vtex/product-context.mjs.js]
+[./node_modules/@vtex/product-context.mjs.jsx]
+[./node_modules/@vtex/product-context.mjs.tsx]
+[./node_modules/@vtex/product-context.mjs.ts]
+[./node_modules/@vtex/product-context.mjs.d.ts]
+[./node_modules/@vtex/product-context.mjs.css]
+[./react/node_modules/@vtex/product-context.mjs]
+[./node_modules/@vtex/product-context.js/package.json]
+[./node_modules/@vtex/product-context.js.mjs]
+[./node_modules/@vtex/product-context.js.js]
+[./node_modules/@vtex/product-context.js.jsx]
+[./node_modules/@vtex/product-context.js.tsx]
+[./node_modules/@vtex/product-context.js.ts]
+[./node_modules/@vtex/product-context.js.d.ts]
+[./node_modules/@vtex/product-context.js.css]
+[./react/node_modules/@vtex/product-context.js]
+[./node_modules/@vtex/product-context.jsx/package.json]
+[./node_modules/@vtex/product-context.jsx.mjs]
+[./node_modules/@vtex/product-context.jsx.js]
+[./node_modules/@vtex/product-context.jsx.jsx]
+[./node_modules/@vtex/product-context.jsx.tsx]
+[./node_modules/@vtex/product-context.jsx.ts]
+[./node_modules/@vtex/product-context.jsx.d.ts]
+[./node_modules/@vtex/product-context.jsx.css]
+[./react/node_modules/@vtex/product-context.jsx]
+[./node_modules/@vtex/product-context.tsx/package.json]
+[./node_modules/@vtex/product-context.tsx.mjs]
+[./node_modules/@vtex/product-context.tsx.js]
+[./node_modules/@vtex/product-context.tsx.jsx]
+[./node_modules/@vtex/product-context.tsx.tsx]
+[./node_modules/@vtex/product-context.tsx.ts]
+[./node_modules/@vtex/product-context.tsx.d.ts]
+[./node_modules/@vtex/product-context.tsx.css]
+[./react/node_modules/@vtex/product-context.tsx]
+[./node_modules/@vtex/product-context.ts/package.json]
+[./node_modules/@vtex/product-context.ts.mjs]
+[./node_modules/@vtex/product-context.ts.js]
+[./node_modules/@vtex/product-context.ts.jsx]
+[./node_modules/@vtex/product-context.ts.tsx]
+[./node_modules/@vtex/product-context.ts.ts]
+[./node_modules/@vtex/product-context.ts.d.ts]
+[./node_modules/@vtex/product-context.ts.css]
+[./react/node_modules/@vtex/product-context.ts]
+[./node_modules/@vtex/product-context.d.ts/package.json]
+[./node_modules/@vtex/product-context.d.ts.mjs]
+[./node_modules/@vtex/product-context.d.ts.js]
+[./node_modules/@vtex/product-context.d.ts.jsx]
+[./node_modules/@vtex/product-context.d.ts.tsx]
+[./node_modules/@vtex/product-context.d.ts.ts]
+[./node_modules/@vtex/product-context.d.ts.d.ts]
+[./node_modules/@vtex/product-context.d.ts.css]
+[./react/node_modules/@vtex/product-context.d.ts]
+[./node_modules/@vtex/product-context.css/package.json]
+[./node_modules/@vtex/product-context.css.mjs]
+[./node_modules/@vtex/product-context.css.js]
+[./node_modules/@vtex/product-context.css.jsx]
+[./node_modules/@vtex/product-context.css.tsx]
+[./node_modules/@vtex/product-context.css.ts]
+[./node_modules/@vtex/product-context.css.d.ts]
+[./node_modules/@vtex/product-context.css.css]
+[./react/node_modules/@vtex/product-context.css]
+ @ ./react/PriceUpdater.tsx 3:0-51 9:20-30
+ @ ../PriceUpdater.js
+./react/PriceUpdater.tsx
+Module not found: Error: Can't resolve '@vtex/render-runtime' in './react'
+resolve '@vtex/render-runtime' in './react'
+  Parsed request is a module
+  using description file: ./react/package.json (relative path: .)
+    Field 'browser' doesn't contain a valid alias configuration
+    resolve as module
+      ./node_modules doesn't exist or is not a directory
+      /cache/link/link_todddesantis_todddev3/todddesantis.kitco-price@0.0.1/node_modules doesn't exist or is not a directory
+      /cache/link/link_todddesantis_todddev3/node_modules doesn't exist or is not a directory
+      /cache/link/node_modules doesn't exist or is not a directory
+      /cache/node_modules doesn't exist or is not a directory
+      /node_modules doesn't exist or is not a directory
+      looking for modules in ./react/node_modules
+        using description file: ./react/package.json (relative path: ./node_modules)
+          Field 'browser' doesn't contain a valid alias configuration
+          using description file: ./react/package.json (relative path: ./node_modules/@vtex/render-runtime)
+            no extension
+              Field 'browser' doesn't contain a valid alias configuration
+              resolved symlink to ./node_modules/@vtex/render-runtime
+                No description file found
+                no extension
+                  Field 'browser' doesn't contain a valid alias configuration
+                  ./node_modules/@vtex/render-runtime doesn't exist
+                .mjs
+                  Field 'browser' doesn't contain a valid alias configuration
+                  ./node_modules/@vtex/render-runtime.mjs doesn't exist
+                .js
+                  Field 'browser' doesn't contain a valid alias configuration
+                  ./node_modules/@vtex/render-runtime.js doesn't exist
+                .jsx
+                  Field 'browser' doesn't contain a valid alias configuration
+                  ./node_modules/@vtex/render-runtime.jsx doesn't exist
+                .tsx
+                  Field 'browser' doesn't contain a valid alias configuration
+                  ./node_modules/@vtex/render-runtime.tsx doesn't exist
+                .ts
+                  Field 'browser' doesn't contain a valid alias configuration
+                  ./node_modules/@vtex/render-runtime.ts doesn't exist
+                .d.ts
+                  Field 'browser' doesn't contain a valid alias configuration
+                  ./node_modules/@vtex/render-runtime.d.ts doesn't exist
+                .css
+                  Field 'browser' doesn't contain a valid alias configuration
+                  ./node_modules/@vtex/render-runtime.css doesn't exist
+                as directory
+                  ./node_modules/@vtex/render-runtime doesn't exist
+              ./react/node_modules/@vtex/render-runtime doesn't exist
+            .mjs
+              Field 'browser' doesn't contain a valid alias configuration
+              resolved symlink to ./node_modules/@vtex/render-runtime.mjs
+                No description file found
+                no extension
+                  Field 'browser' doesn't contain a valid alias configuration
+                  ./node_modules/@vtex/render-runtime.mjs doesn't exist
+                .mjs
+                  Field 'browser' doesn't contain a valid alias configuration
+                  ./node_modules/@vtex/render-runtime.mjs.mjs doesn't exist
+                .js
+                  Field 'browser' doesn't contain a valid alias configuration
+                  ./node_modules/@vtex/render-runtime.mjs.js doesn't exist
+                .jsx
+                  Field 'browser' doesn't contain a valid alias configuration
+                  ./node_modules/@vtex/render-runtime.mjs.jsx doesn't exist
+                .tsx
+                  Field 'browser' doesn't contain a valid alias configuration
+                  ./node_modules/@vtex/render-runtime.mjs.tsx doesn't exist
+                .ts
+                  Field 'browser' doesn't contain a valid alias configuration
+                  ./node_modules/@vtex/render-runtime.mjs.ts doesn't exist
+                .d.ts
+                  Field 'browser' doesn't contain a valid alias configuration
+                  ./node_modules/@vtex/render-runtime.mjs.d.ts doesn't exist
+                .css
+                  Field 'browser' doesn't contain a valid alias configuration
+                  ./node_modules/@vtex/render-runtime.mjs.css doesn't exist
+                as directory
+                  ./node_modules/@vtex/render-runtime.mjs doesn't exist
+              ./react/node_modules/@vtex/render-runtime.mjs doesn't exist
+            .js
+              Field 'browser' doesn't contain a valid alias configuration
+              resolved symlink to ./node_modules/@vtex/render-runtime.js
+                No description file found
+                no extension
+                  Field 'browser' doesn't contain a valid alias configuration
+                  ./node_modules/@vtex/render-runtime.js doesn't exist
+                .mjs
+                  Field 'browser' doesn't contain a valid alias configuration
+                  ./node_modules/@vtex/render-runtime.js.mjs doesn't exist
+                .js
+                  Field 'browser' doesn't contain a valid alias configuration
+                  ./node_modules/@vtex/render-runtime.js.js doesn't exist
+                .jsx
+                  Field 'browser' doesn't contain a valid alias configuration
+                  ./node_modules/@vtex/render-runtime.js.jsx doesn't exist
+                .tsx
+                  Field 'browser' doesn't contain a valid alias configuration
+                  ./node_modules/@vtex/render-runtime.js.tsx doesn't exist
+                .ts
+                  Field 'browser' doesn't contain a valid alias configuration
+                  ./node_modules/@vtex/render-runtime.js.ts doesn't exist
+                .d.ts
+                  Field 'browser' doesn't contain a valid alias configuration
+                  ./node_modules/@vtex/render-runtime.js.d.ts doesn't exist
+                .css
+                  Field 'browser' doesn't contain a valid alias configuration
+                  ./node_modules/@vtex/render-runtime.js.css doesn't exist
+                as directory
+                  ./node_modules/@vtex/render-runtime.js doesn't exist
+              ./react/node_modules/@vtex/render-runtime.js doesn't exist
+            .jsx
+              Field 'browser' doesn't contain a valid alias configuration
+              resolved symlink to ./node_modules/@vtex/render-runtime.jsx
+                No description file found
+                no extension
+                  Field 'browser' doesn't contain a valid alias configuration
+                  ./node_modules/@vtex/render-runtime.jsx doesn't exist
+                .mjs
+                  Field 'browser' doesn't contain a valid alias configuration
+                  ./node_modules/@vtex/render-runtime.jsx.mjs doesn't exist
+                .js
+                  Field 'browser' doesn't contain a valid alias configuration
+                  ./node_modules/@vtex/render-runtime.jsx.js doesn't exist
+                .jsx
+                  Field 'browser' doesn't contain a valid alias configuration
+                  ./node_modules/@vtex/render-runtime.jsx.jsx doesn't exist
+                .tsx
+                  Field 'browser' doesn't contain a valid alias configuration
+                  ./node_modules/@vtex/render-runtime.jsx.tsx doesn't exist
+                .ts
+                  Field 'browser' doesn't contain a valid alias configuration
+                  ./node_modules/@vtex/render-runtime.jsx.ts doesn't exist
+                .d.ts
+                  Field 'browser' doesn't contain a valid alias configuration
+                  ./node_modules/@vtex/render-runtime.jsx.d.ts doesn't exist
+                .css
+                  Field 'browser' doesn't contain a valid alias configuration
+                  ./node_modules/@vtex/render-runtime.jsx.css doesn't exist
+                as directory
+                  ./node_modules/@vtex/render-runtime.jsx doesn't exist
+              ./react/node_modules/@vtex/render-runtime.jsx doesn't exist
+            .tsx
+              Field 'browser' doesn't contain a valid alias configuration
+              resolved symlink to ./node_modules/@vtex/render-runtime.tsx
+                No description file found
+                no extension
+                  Field 'browser' doesn't contain a valid alias configuration
+                  ./node_modules/@vtex/render-runtime.tsx doesn't exist
+                .mjs
+                  Field 'browser' doesn't contain a valid alias configuration
+                  ./node_modules/@vtex/render-runtime.tsx.mjs doesn't exist
+                .js
+                  Field 'browser' doesn't contain a valid alias configuration
+                  ./node_modules/@vtex/render-runtime.tsx.js doesn't exist
+                .jsx
+                  Field 'browser' doesn't contain a valid alias configuration
+                  ./node_modules/@vtex/render-runtime.tsx.jsx doesn't exist
+                .tsx
+                  Field 'browser' doesn't contain a valid alias configuration
+                  ./node_modules/@vtex/render-runtime.tsx.tsx doesn't exist
+                .ts
+                  Field 'browser' doesn't contain a valid alias configuration
+                  ./node_modules/@vtex/render-runtime.tsx.ts doesn't exist
+                .d.ts
+                  Field 'browser' doesn't contain a valid alias configuration
+                  ./node_modules/@vtex/render-runtime.tsx.d.ts doesn't exist
+                .css
+                  Field 'browser' doesn't contain a valid alias configuration
+                  ./node_modules/@vtex/render-runtime.tsx.css doesn't exist
+                as directory
+                  ./node_modules/@vtex/render-runtime.tsx doesn't exist
+              ./react/node_modules/@vtex/render-runtime.tsx doesn't exist
+            .ts
+              Field 'browser' doesn't contain a valid alias configuration
+              resolved symlink to ./node_modules/@vtex/render-runtime.ts
+                No description file found
+                no extension
+                  Field 'browser' doesn't contain a valid alias configuration
+                  ./node_modules/@vtex/render-runtime.ts doesn't exist
+                .mjs
+                  Field 'browser' doesn't contain a valid alias configuration
+                  ./node_modules/@vtex/render-runtime.ts.mjs doesn't exist
+                .js
+                  Field 'browser' doesn't contain a valid alias configuration
+                  ./node_modules/@vtex/render-runtime.ts.js doesn't exist
+                .jsx
+                  Field 'browser' doesn't contain a valid alias configuration
+                  ./node_modules/@vtex/render-runtime.ts.jsx doesn't exist
+                .tsx
+                  Field 'browser' doesn't contain a valid alias configuration
+                  ./node_modules/@vtex/render-runtime.ts.tsx doesn't exist
+                .ts
+                  Field 'browser' doesn't contain a valid alias configuration
+                  ./node_modules/@vtex/render-runtime.ts.ts doesn't exist
+                .d.ts
+                  Field 'browser' doesn't contain a valid alias configuration
+                  ./node_modules/@vtex/render-runtime.ts.d.ts doesn't exist
+                .css
+                  Field 'browser' doesn't contain a valid alias configuration
+                  ./node_modules/@vtex/render-runtime.ts.css doesn't exist
+                as directory
+                  ./node_modules/@vtex/render-runtime.ts doesn't exist
+              ./react/node_modules/@vtex/render-runtime.ts doesn't exist
+            .d.ts
+              Field 'browser' doesn't contain a valid alias configuration
+              resolved symlink to ./node_modules/@vtex/render-runtime.d.ts
+                No description file found
+                no extension
+                  Field 'browser' doesn't contain a valid alias configuration
+                  ./node_modules/@vtex/render-runtime.d.ts doesn't exist
+                .mjs
+                  Field 'browser' doesn't contain a valid alias configuration
+                  ./node_modules/@vtex/render-runtime.d.ts.mjs doesn't exist
+                .js
+                  Field 'browser' doesn't contain a valid alias configuration
+                  ./node_modules/@vtex/render-runtime.d.ts.js doesn't exist
+                .jsx
+                  Field 'browser' doesn't contain a valid alias configuration
+                  ./node_modules/@vtex/render-runtime.d.ts.jsx doesn't exist
+                .tsx
+                  Field 'browser' doesn't contain a valid alias configuration
+                  ./node_modules/@vtex/render-runtime.d.ts.tsx doesn't exist
+                .ts
+                  Field 'browser' doesn't contain a valid alias configuration
+                  ./node_modules/@vtex/render-runtime.d.ts.ts doesn't exist
+                .d.ts
+                  Field 'browser' doesn't contain a valid alias configuration
+                  ./node_modules/@vtex/render-runtime.d.ts.d.ts doesn't exist
+                .css
+                  Field 'browser' doesn't contain a valid alias configuration
+                  ./node_modules/@vtex/render-runtime.d.ts.css doesn't exist
+                as directory
+                  ./node_modules/@vtex/render-runtime.d.ts doesn't exist
+              ./react/node_modules/@vtex/render-runtime.d.ts doesn't exist
+            .css
+              Field 'browser' doesn't contain a valid alias configuration
+              resolved symlink to ./node_modules/@vtex/render-runtime.css
+                No description file found
+                no extension
+                  Field 'browser' doesn't contain a valid alias configuration
+                  ./node_modules/@vtex/render-runtime.css doesn't exist
+                .mjs
+                  Field 'browser' doesn't contain a valid alias configuration
+                  ./node_modules/@vtex/render-runtime.css.mjs doesn't exist
+                .js
+                  Field 'browser' doesn't contain a valid alias configuration
+                  ./node_modules/@vtex/render-runtime.css.js doesn't exist
+                .jsx
+                  Field 'browser' doesn't contain a valid alias configuration
+                  ./node_modules/@vtex/render-runtime.css.jsx doesn't exist
+                .tsx
+                  Field 'browser' doesn't contain a valid alias configuration
+                  ./node_modules/@vtex/render-runtime.css.tsx doesn't exist
+                .ts
+                  Field 'browser' doesn't contain a valid alias configuration
+                  ./node_modules/@vtex/render-runtime.css.ts doesn't exist
+                .d.ts
+                  Field 'browser' doesn't contain a valid alias configuration
+                  ./node_modules/@vtex/render-runtime.css.d.ts doesn't exist
+                .css
+                  Field 'browser' doesn't contain a valid alias configuration
+                  ./node_modules/@vtex/render-runtime.css.css doesn't exist
+                as directory
+                  ./node_modules/@vtex/render-runtime.css doesn't exist
+              ./react/node_modules/@vtex/render-runtime.css doesn't exist
+            as directory
+              ./react/node_modules/@vtex/render-runtime doesn't exist
+[./node_modules]
+[/cache/link/link_todddesantis_todddev3/todddesantis.kitco-price@0.0.1/node_modules]
+[/cache/link/link_todddesantis_todddev3/node_modules]
+[/cache/link/node_modules]
+[/cache/node_modules]
+[/node_modules]
+[./node_modules/@vtex/render-runtime/package.json]
+[./node_modules/@vtex/render-runtime]
+[./node_modules/@vtex/render-runtime.mjs]
+[./node_modules/@vtex/render-runtime.js]
+[./node_modules/@vtex/render-runtime.jsx]
+[./node_modules/@vtex/render-runtime.tsx]
+[./node_modules/@vtex/render-runtime.ts]
+[./node_modules/@vtex/render-runtime.d.ts]
+[./node_modules/@vtex/render-runtime.css]
+[./react/node_modules/@vtex/render-runtime]
+[./node_modules/@vtex/render-runtime.mjs/package.json]
+[./node_modules/@vtex/render-runtime.mjs.mjs]
+[./node_modules/@vtex/render-runtime.mjs.js]
+[./node_modules/@vtex/render-runtime.mjs.jsx]
+[./node_modules/@vtex/render-runtime.mjs.tsx]
+[./node_modules/@vtex/render-runtime.mjs.ts]
+[./node_modules/@vtex/render-runtime.mjs.d.ts]
+[./node_modules/@vtex/render-runtime.mjs.css]
+[./react/node_modules/@vtex/render-runtime.mjs]
+[./node_modules/@vtex/render-runtime.js/package.json]
+[./node_modules/@vtex/render-runtime.js.mjs]
+[./node_modules/@vtex/render-runtime.js.js]
+[./node_modules/@vtex/render-runtime.js.jsx]
+[./node_modules/@vtex/render-runtime.js.tsx]
+[./node_modules/@vtex/render-runtime.js.ts]
+[./node_modules/@vtex/render-runtime.js.d.ts]
+[./node_modules/@vtex/render-runtime.js.css]
+[./react/node_modules/@vtex/render-runtime.js]
+[./node_modules/@vtex/render-runtime.jsx/package.json]
+[./node_modules/@vtex/render-runtime.jsx.mjs]
+[./node_modules/@vtex/render-runtime.jsx.js]
+[./node_modules/@vtex/render-runtime.jsx.jsx]
+[./node_modules/@vtex/render-runtime.jsx.tsx]
+[./node_modules/@vtex/render-runtime.jsx.ts]
+[./node_modules/@vtex/render-runtime.jsx.d.ts]
+[./node_modules/@vtex/render-runtime.jsx.css]
+[./react/node_modules/@vtex/render-runtime.jsx]
+[./node_modules/@vtex/render-runtime.tsx/package.json]
+[./node_modules/@vtex/render-runtime.tsx.mjs]
+[./node_modules/@vtex/render-runtime.tsx.js]
+[./node_modules/@vtex/render-runtime.tsx.jsx]
+[./node_modules/@vtex/render-runtime.tsx.tsx]
+[./node_modules/@vtex/render-runtime.tsx.ts]
+[./node_modules/@vtex/render-runtime.tsx.d.ts]
+[./node_modules/@vtex/render-runtime.tsx.css]
+[./react/node_modules/@vtex/render-runtime.tsx]
+[./node_modules/@vtex/render-runtime.ts/package.json]
+[./node_modules/@vtex/render-runtime.ts.mjs]
+[./node_modules/@vtex/render-runtime.ts.js]
+[./node_modules/@vtex/render-runtime.ts.jsx]
+[./node_modules/@vtex/render-runtime.ts.tsx]
+[./node_modules/@vtex/render-runtime.ts.ts]
+[./node_modules/@vtex/render-runtime.ts.d.ts]
+[./node_modules/@vtex/render-runtime.ts.css]
+[./react/node_modules/@vtex/render-runtime.ts]
+[./node_modules/@vtex/render-runtime.d.ts/package.json]
+[./node_modules/@vtex/render-runtime.d.ts.mjs]
+[./node_modules/@vtex/render-runtime.d.ts.js]
+[./node_modules/@vtex/render-runtime.d.ts.jsx]
+[./node_modules/@vtex/render-runtime.d.ts.tsx]
+[./node_modules/@vtex/render-runtime.d.ts.ts]
+[./node_modules/@vtex/render-runtime.d.ts.d.ts]
+[./node_modules/@vtex/render-runtime.d.ts.css]
+[./react/node_modules/@vtex/render-runtime.d.ts]
+[./node_modules/@vtex/render-runtime.css/package.json]
+[./node_modules/@vtex/render-runtime.css.mjs]
+[./node_modules/@vtex/render-runtime.css.js]
+[./node_modules/@vtex/render-runtime.css.jsx]
+[./node_modules/@vtex/render-runtime.css.tsx]
+[./node_modules/@vtex/render-runtime.css.ts]
+[./node_modules/@vtex/render-runtime.css.d.ts]
+[./node_modules/@vtex/render-runtime.css.css]
+[./react/node_modules/@vtex/render-runtime.css]
+ @ ./react/PriceUpdater.tsx 6:0-50 19:16-26
+ @ ../PriceUpdater.js
+[at-loader] [31m../../.../react/PriceUpdater.tsx[39m:6:25 
+    TS6133: [31m'ProductPrice' is declared but its value is never read.[39m
+[at-loader] [31m../../.../react/components/PriceUpdater.tsx[39m:16:11 
+    TS6133: [31m'setQuery' is declared but its value is never read.[39m
+[at-loader] [31m../../.../react/components/PriceUpdater.tsx[39m:17:12 
+    TS6133: [31m'currentPrice' is declared but its value is never read.[39m vtex.builder-hub@0.308.0  
+Terminate batch job (Y/N)? 

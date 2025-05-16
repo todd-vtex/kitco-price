@@ -1,5 +1,8 @@
 {
     "kitco-price": {
         "component": "PriceUpdater"
+    },
+    "kitco-bulk-discount": {
+        "component": "BulkDiscountDisplay"
     }
 }

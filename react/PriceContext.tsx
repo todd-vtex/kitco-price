@@ -57,10 +57,8 @@ export const PriceProvider: React.FC<{ children: React.ReactNode }> = ({ childre
             setCurrentPrice(rawPrice)
             setOriginalPrice(rawPrice)
             
-            // Start price updates immediately after initialization
+            // Only start price updates after 10 seconds
             const updateInterval = setInterval(updatePrice, 10000)
-            updatePrice() // Do initial update
-            
             return () => clearInterval(updateInterval)
         } else {
             console.warn('Could not find valid price in product context:', {

@@ -154,7 +154,7 @@ const PriceUpdater: PriceUpdaterComponent = () => {
                     )}
                 </p>
                 <p style={{ fontSize: '0.9em', color: '#666' }}>
-                    Price updates every 10 seconds. Use the normal Add to Cart button below.
+                    Price updates every 10 seconds. Add to cart to lock in your price now!
                 </p>
             </div>
         </div>

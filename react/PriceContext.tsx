@@ -76,7 +76,7 @@ export const PriceProvider: React.FC<{ children: React.ReactNode }> = ({ childre
 
         try {
             // Fetch price from Heroku endpoint
-            const response = await fetch('https://kitco-price-updater-1d4e12da8d56.herokuapp.com/price', {
+            const response = await fetch('https://kitco-price-updater-1d4e12da8d56.herokuapp.com/', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',

@@ -76,20 +76,14 @@ export const PriceProvider: React.FC<{ children: React.ReactNode }> = ({ childre
 
         try {
             // Fetch price from Heroku endpoint
-            const response = await fetch('https://kitco-price-updater-1d4e12da8d56.herokuapp.com/', {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json',
-                },
-                body: JSON.stringify({ basePrice: originalPrice })
-            })
+            const response = await fetch(`https://kitco-price-updater-1d4e12da8d56.herokuapp.com/price?basePrice=${originalPrice}`)
 
             if (!response.ok) {
                 throw new Error(`HTTP error! status: ${response.status}`)
             }
 
             const data = await response.json()
-            const newPrice = data.price
+            const newPrice = data.currentPrice
 
             console.log('Updating price from Heroku:', {
                 originalPrice,

@@ -1,4 +1,4 @@
-import React, { createContext, useContext, useState, useEffect, useRef } from 'react'
+import React, { createContext, useContext, useState, useEffect } from 'react'
 import { useProduct } from 'vtex.product-context'
 
 interface ProductContextType {
@@ -37,10 +37,8 @@ export const PriceProvider: React.FC<{ children: React.ReactNode }> = ({ childre
     const productContext = useProduct() as ProductContextType
     const [currentPrice, setCurrentPrice] = useState<number>(0)
     const [originalPrice, setOriginalPrice] = useState<number>(0)
-    const [isInitialized, setIsInitialized] = useState(false)
-    const initialUpdateDone = useRef(false)
 
-    // Initialize prices from VTEX context
+    // Combined initialization and price updates
     useEffect(() => {
         console.log('Full VTEX Product Context:', productContext)
         
@@ -56,10 +54,14 @@ export const PriceProvider: React.FC<{ children: React.ReactNode }> = ({ childre
 
         if (typeof rawPrice === 'number' && rawPrice > 0) {
             console.log('Setting initial price:', rawPrice)
-            
             setCurrentPrice(rawPrice)
             setOriginalPrice(rawPrice)
-            setIsInitialized(true)
+            
+            // Start price updates immediately after initialization
+            const updateInterval = setInterval(updatePrice, 10000)
+            updatePrice() // Do initial update
+            
+            return () => clearInterval(updateInterval)
         } else {
             console.warn('Could not find valid price in product context:', {
                 priceRange: productContext?.product?.priceRange,
@@ -104,37 +106,13 @@ export const PriceProvider: React.FC<{ children: React.ReactNode }> = ({ childre
         }
     }
 
-    // Start price updates only after initialization
-    useEffect(() => {
-        if (!isInitialized) {
-            console.log('Waiting for price initialization...')
-            return
-        }
-
-        console.log('Starting price updates with initial state:', {
-            currentPrice,
-            originalPrice,
-            isInitialized
-        })
-
-        // Only do initial update if we haven't done it yet
-        if (!initialUpdateDone.current) {
-            updatePrice()
-            initialUpdateDone.current = true
-        }
-        
-        const interval = setInterval(updatePrice, 10000)
-        return () => clearInterval(interval)
-    }, [isInitialized, originalPrice])
-
     // Debug state changes
     useEffect(() => {
         console.log('Price state updated:', {
             currentPrice,
-            originalPrice,
-            isInitialized
+            originalPrice
         })
-    }, [currentPrice, originalPrice, isInitialized])
+    }, [currentPrice, originalPrice])
 
     return (
         <PriceContext.Provider value={{

@@ -68,28 +68,44 @@ export const PriceProvider: React.FC<{ children: React.ReactNode }> = ({ childre
         }
     }, [productContext])
 
-    const updatePrice = () => {
+    const updatePrice = async () => {
         if (!originalPrice) {
             console.warn('Update price called before initialization')
             return
         }
 
         try {
-            // Calculate random price within range (±5%)
-            const minPrice = originalPrice * 0.95  // 5% below original
-            const maxPrice = originalPrice * 1.05  // 5% above original
-            const newPrice = Math.round(Math.random() * (maxPrice - minPrice) + minPrice)
+            // Fetch price from Heroku endpoint
+            const response = await fetch('https://kitco-price-updater-1d4e12da8d56.herokuapp.com/price', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({ basePrice: originalPrice })
+            })
 
-            console.log('Updating price:', {
+            if (!response.ok) {
+                throw new Error(`HTTP error! status: ${response.status}`)
+            }
+
+            const data = await response.json()
+            const newPrice = data.price
+
+            console.log('Updating price from Heroku:', {
                 originalPrice,
-                minPrice,
-                maxPrice,
-                newPrice
+                newPrice,
+                response: data
             })
 
             setCurrentPrice(newPrice)
         } catch (error) {
-            console.error('Error updating price:', error)
+            console.error('Error fetching price from Heroku:', error)
+            // Fallback to local calculation if Heroku fails
+            const minPrice = originalPrice * 0.95
+            const maxPrice = originalPrice * 1.05
+            const fallbackPrice = Math.round(Math.random() * (maxPrice - minPrice) + minPrice)
+            console.log('Falling back to local price calculation:', fallbackPrice)
+            setCurrentPrice(fallbackPrice)
         }
     }
 
@@ -106,6 +122,9 @@ export const PriceProvider: React.FC<{ children: React.ReactNode }> = ({ childre
             isInitialized
         })
 
+        // Initial update
+        updatePrice()
+        
         const interval = setInterval(updatePrice, 10000)
         return () => clearInterval(interval)
     }, [isInitialized, originalPrice])

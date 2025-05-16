@@ -1,4 +1,4 @@
-import React, { createContext, useContext, useState, useEffect } from 'react'
+import React, { createContext, useContext, useState, useEffect, useRef } from 'react'
 import { useProduct } from 'vtex.product-context'
 
 interface ProductContextType {
@@ -38,6 +38,7 @@ export const PriceProvider: React.FC<{ children: React.ReactNode }> = ({ childre
     const [currentPrice, setCurrentPrice] = useState<number>(0)
     const [originalPrice, setOriginalPrice] = useState<number>(0)
     const [isInitialized, setIsInitialized] = useState(false)
+    const initialUpdateDone = useRef(false)
 
     // Initialize prices from VTEX context
     useEffect(() => {
@@ -116,8 +117,11 @@ export const PriceProvider: React.FC<{ children: React.ReactNode }> = ({ childre
             isInitialized
         })
 
-        // Initial update
-        updatePrice()
+        // Only do initial update if we haven't done it yet
+        if (!initialUpdateDone.current) {
+            updatePrice()
+            initialUpdateDone.current = true
+        }
         
         const interval = setInterval(updatePrice, 10000)
         return () => clearInterval(interval)

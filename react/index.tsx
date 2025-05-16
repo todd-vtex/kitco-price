@@ -1,6 +1,3 @@
-import KitcoPriceComponent from './KitcoPrice'
-import TestBlockComponent from './TestBlock'
+import PriceUpdater from './PriceUpdater'
 
-// Export components with their exact names as they appear in interfaces.json
-export const KitcoPrice = KitcoPriceComponent
-export const TestBlock = TestBlockComponent 
+export default PriceUpdater 

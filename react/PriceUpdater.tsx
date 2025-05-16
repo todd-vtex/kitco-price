@@ -1,9 +1,39 @@
 import React, { useEffect, useState } from 'react'
 import { useProduct } from 'vtex.product-context'
 
+interface ProductType {
+    priceRange?: {
+        sellingPrice?: {
+            lowPrice?: number
+        }
+    }
+}
+
+interface ProductContextType {
+    product?: ProductType
+}
+
+interface Schema {
+    title: string
+    description: string
+    type: string
+    properties: {
+        updateInterval: {
+            title: string
+            description: string
+            type: string
+            default: number
+        }
+    }
+}
+
+interface PriceUpdaterComponent extends React.FC {
+    schema: Schema
+}
+
 // Simplified version just showing the dynamic price and using the native add-to-cart button
-const PriceUpdater: React.FC = () => {
-    const productContext = useProduct() || {}
+const PriceUpdater: PriceUpdaterComponent = () => {
+    const productContext = useProduct() as ProductContextType || {}
     const { product } = productContext
     const [currentPrice, setCurrentPrice] = useState<number>(0)
     const [originalPrice, setOriginalPrice] = useState<number>(0)
@@ -16,8 +46,7 @@ const PriceUpdater: React.FC = () => {
     useEffect(() => {
         if (product) {
             console.log('Product data:', JSON.stringify(product, null, 2));
-            // @ts-ignore - Access price data safely
-            const priceData = product.priceRange?.sellingPrice?.lowPrice;
+            const priceData = product.priceRange?.sellingPrice?.lowPrice || 0;
             console.log('Price data raw value:', priceData);
             console.log('Price data type:', typeof priceData);
 
@@ -32,7 +61,6 @@ const PriceUpdater: React.FC = () => {
 
         const updatePrice = () => {
             try {
-                // @ts-ignore - Product structure varies but we know it has this
                 let basePrice = product.priceRange?.sellingPrice?.lowPrice || 0;
 
                 // Log the raw price we're getting
@@ -69,6 +97,16 @@ const PriceUpdater: React.FC = () => {
         return () => clearInterval(interval);
     }, [product, originalPrice]);
 
+    // Format prices with proper thousands separators and two decimal places
+    const formatPrice = (cents: number): string => {
+        return (cents / 100).toLocaleString('en-US', {
+            style: 'currency',
+            currency: 'USD',
+            minimumFractionDigits: 2,
+            maximumFractionDigits: 2
+        });
+    };
+
     // Don't render if we don't have product data
     if (!product) {
         return (
@@ -88,16 +126,6 @@ const PriceUpdater: React.FC = () => {
     // Calculate discount with one decimal place instead of rounding to whole number
     const discount = originalPrice > 0 ? Number(((1 - (currentPrice / originalPrice)) * 100).toFixed(1)) : 0;
     const priceIncreased = discount < 0;
-
-    // Format prices with proper thousands separators and two decimal places
-    const formatPrice = (cents: number): string => {
-        return (cents / 100).toLocaleString('en-US', {
-            style: 'currency',
-            currency: 'USD',
-            minimumFractionDigits: 2,
-            maximumFractionDigits: 2
-        });
-    };
 
     return (
         <div className="price-updater" style={{
@@ -133,12 +161,19 @@ const PriceUpdater: React.FC = () => {
     )
 }
 
-    // Schema for VTEX IO
-    ; (PriceUpdater as any).schema = {
-        title: 'Price Updater',
-        description: 'Shows a random price that changes every 10 seconds (±5%)',
-        type: 'object',
-        properties: {},
+// Schema for VTEX IO
+PriceUpdater.schema = {
+    title: 'Price Updater',
+    description: 'Shows a random price that changes every 10 seconds (±5%)',
+    type: 'object',
+    properties: {
+        updateInterval: {
+            title: 'Update Interval',
+            description: 'Time in seconds between price updates',
+            type: 'number',
+            default: 10
+        }
     }
+}
 
 export default React.memo(PriceUpdater) 

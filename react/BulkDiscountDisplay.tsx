@@ -1,15 +1,5 @@
-import React, { useEffect, useState } from 'react'
-import { useProduct } from 'vtex.product-context'
-
-interface ProductContextType {
-    product?: {
-        priceRange?: {
-            sellingPrice?: {
-                lowPrice?: number
-            }
-        }
-    }
-}
+import React from 'react'
+import { usePriceContext } from './PriceContext'
 
 interface BulkDiscountDisplayComponent extends React.FC {
     schema: {
@@ -21,12 +11,7 @@ interface BulkDiscountDisplayComponent extends React.FC {
 }
 
 const BulkDiscountDisplay: BulkDiscountDisplayComponent = () => {
-    const productContext = useProduct() as ProductContextType
-    const basePrice = productContext?.product?.priceRange?.sellingPrice?.lowPrice || 0
-    const [currentPrice, setCurrentPrice] = useState<number>(0)
-
-    // PRICE MULTIPLIER - if the price should be $3,297.61 but shows as $32.98, use 100
-    const PRICE_MULTIPLIER = 100;
+    const { currentPrice, originalPrice } = usePriceContext()
 
     // Payment method discounts
     const WIRE_CHECK_DISCOUNT = 0.04 // 4% discount
@@ -36,36 +21,14 @@ const BulkDiscountDisplay: BulkDiscountDisplayComponent = () => {
     const TIER_10_DISCOUNT = 0.01 // Additional 1% for 10+
     const TIER_40_DISCOUNT = 0.02 // Additional 2% total for 40+
 
-    // Update price randomly every 10 seconds
-    useEffect(() => {
-        if (!basePrice) return
-
-        const updatePrice = () => {
-            try {
-                let adjustedBasePrice = basePrice * PRICE_MULTIPLIER;
-                
-                // Calculate random price within range (±5%)
-                const minPrice = adjustedBasePrice * 0.95;  // 5% below original
-                const maxPrice = adjustedBasePrice * 1.05;  // 5% above original
-                const newPrice = Math.round(Math.random() * (maxPrice - minPrice) + minPrice);
-
-                setCurrentPrice(newPrice);
-            } catch (error) {
-                console.error('Error updating price:', error);
-            }
-        }
-
-        // Initial price update
-        updatePrice();
-
-        // Set up interval for price updates
-        const interval = setInterval(updatePrice, 10000);
-        return () => clearInterval(interval);
-    }, [basePrice]);
-
     const calculatePrice = (basePrice: number, paymentDiscount: number, tierDiscount: number): number => {
+        if (typeof basePrice !== 'number' || basePrice <= 0) {
+            console.warn('Invalid base price for calculation:', basePrice)
+            return 0
+        }
         const totalDiscount = paymentDiscount + tierDiscount
-        return basePrice * (1 - totalDiscount)
+        const calculatedPrice = Math.round(basePrice * (1 - totalDiscount) * 100) / 100
+        return calculatedPrice
     }
 
     const formatPrice = (price: number): string => {
@@ -76,6 +39,64 @@ const BulkDiscountDisplay: BulkDiscountDisplayComponent = () => {
             maximumFractionDigits: 2
         }).format(price)
     }
+
+    // Check if we have valid prices
+    const isLoading = currentPrice === 0 || originalPrice === 0
+
+    if (isLoading) {
+        return (
+            <div className="bulk-discount" style={{
+                padding: '20px',
+                margin: '10px',
+                border: '1px solid #ccc',
+                borderRadius: '5px',
+                background: '#f8f9fa'
+            }}>
+                <h3 style={{
+                    textAlign: 'center',
+                    backgroundColor: '#e9ecef',
+                    padding: '10px',
+                    margin: '-20px -20px 20px -20px',
+                    borderTopLeftRadius: '5px',
+                    borderTopRightRadius: '5px'
+                }}>
+                    Loading Prices...
+                </h3>
+            </div>
+        )
+    }
+
+    // Calculate prices for each payment method using the current dynamic price
+    const mcVisaPrice = currentPrice
+    const wireCheckPrice = calculatePrice(mcVisaPrice, WIRE_CHECK_DISCOUNT, 0)
+    const bitcoinPrice = calculatePrice(mcVisaPrice, BITCOIN_DISCOUNT, 0)
+
+    // Calculate tier prices
+    const mcVisa10Plus = calculatePrice(mcVisaPrice, 0, TIER_10_DISCOUNT)
+    const mcVisa40Plus = calculatePrice(mcVisaPrice, 0, TIER_40_DISCOUNT)
+    
+    const wireCheck10Plus = calculatePrice(mcVisaPrice, WIRE_CHECK_DISCOUNT, TIER_10_DISCOUNT)
+    const wireCheck40Plus = calculatePrice(mcVisaPrice, WIRE_CHECK_DISCOUNT, TIER_40_DISCOUNT)
+    
+    const bitcoin10Plus = calculatePrice(mcVisaPrice, BITCOIN_DISCOUNT, TIER_10_DISCOUNT)
+
+    // Debug price calculations
+    React.useEffect(() => {
+        console.log('BulkDiscount - Price calculations:', {
+            currentPrice,
+            originalPrice,
+            calculatedPrices: {
+                mcVisa: mcVisaPrice,
+                wireCheck: wireCheckPrice,
+                bitcoin: bitcoinPrice,
+                mcVisa10Plus,
+                mcVisa40Plus,
+                wireCheck10Plus,
+                wireCheck40Plus,
+                bitcoin10Plus
+            }
+        })
+    }, [currentPrice, originalPrice])
 
     return (
         <div className="bulk-discount" style={{
@@ -113,20 +134,20 @@ const BulkDiscountDisplay: BulkDiscountDisplayComponent = () => {
                 <tbody>
                     <tr>
                         <td style={{ padding: '8px', borderBottom: '1px solid #dee2e6' }}>1+</td>
-                        <td style={{ padding: '8px', borderBottom: '1px solid #dee2e6' }}>{formatPrice(calculatePrice(currentPrice, WIRE_CHECK_DISCOUNT, 0))}</td>
-                        <td style={{ padding: '8px', borderBottom: '1px solid #dee2e6' }}>{formatPrice(calculatePrice(currentPrice, 0, 0))}</td>
-                        <td style={{ padding: '8px', borderBottom: '1px solid #dee2e6' }}>{formatPrice(calculatePrice(currentPrice, BITCOIN_DISCOUNT, 0))}</td>
+                        <td style={{ padding: '8px', borderBottom: '1px solid #dee2e6' }}>{formatPrice(wireCheckPrice)}</td>
+                        <td style={{ padding: '8px', borderBottom: '1px solid #dee2e6' }}>{formatPrice(mcVisaPrice)}</td>
+                        <td style={{ padding: '8px', borderBottom: '1px solid #dee2e6' }}>{formatPrice(bitcoinPrice)}</td>
                     </tr>
                     <tr>
                         <td style={{ padding: '8px', borderBottom: '1px solid #dee2e6' }}>10+</td>
-                        <td style={{ padding: '8px', borderBottom: '1px solid #dee2e6' }}>{formatPrice(calculatePrice(currentPrice, WIRE_CHECK_DISCOUNT, TIER_10_DISCOUNT))}</td>
-                        <td style={{ padding: '8px', borderBottom: '1px solid #dee2e6' }}>{formatPrice(calculatePrice(currentPrice, 0, TIER_10_DISCOUNT))}</td>
-                        <td style={{ padding: '8px', borderBottom: '1px solid #dee2e6' }}>{formatPrice(calculatePrice(currentPrice, BITCOIN_DISCOUNT, TIER_10_DISCOUNT))}</td>
+                        <td style={{ padding: '8px', borderBottom: '1px solid #dee2e6' }}>{formatPrice(wireCheck10Plus)}</td>
+                        <td style={{ padding: '8px', borderBottom: '1px solid #dee2e6' }}>{formatPrice(mcVisa10Plus)}</td>
+                        <td style={{ padding: '8px', borderBottom: '1px solid #dee2e6' }}>{formatPrice(bitcoin10Plus)}</td>
                     </tr>
                     <tr>
                         <td style={{ padding: '8px', borderBottom: '1px solid #dee2e6' }}>40+</td>
-                        <td style={{ padding: '8px', borderBottom: '1px solid #dee2e6' }}>{formatPrice(calculatePrice(currentPrice, WIRE_CHECK_DISCOUNT, TIER_40_DISCOUNT))}</td>
-                        <td style={{ padding: '8px', borderBottom: '1px solid #dee2e6' }}>{formatPrice(calculatePrice(currentPrice, 0, TIER_40_DISCOUNT))}</td>
+                        <td style={{ padding: '8px', borderBottom: '1px solid #dee2e6' }}>{formatPrice(wireCheck40Plus)}</td>
+                        <td style={{ padding: '8px', borderBottom: '1px solid #dee2e6' }}>{formatPrice(mcVisa40Plus)}</td>
                         <td style={{ padding: '8px', borderBottom: '1px solid #dee2e6' }}>N/A</td>
                     </tr>
                 </tbody>

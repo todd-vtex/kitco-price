@@ -53,7 +53,7 @@ const PriceUpdater: PriceUpdaterComponent = () => {
                     )}
                 </p>
                 <p style={{ fontSize: '0.9em', color: '#666' }}>
-                    Pulling from live pricing mock endpoint. Updates every 10 seconds. Add to cart to lock in your price now!
+                    Pulling from live pricing mock endpoint. Updates every 10 seconds. Add to cart to lock in your price now!!
                 </p>
             </div>
         </div>

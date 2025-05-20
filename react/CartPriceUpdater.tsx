@@ -2,35 +2,23 @@ import React, { useEffect } from 'react'
 import { useOrderForm } from 'vtex.order-manager/OrderForm'
 import { usePriceContext } from './PriceContext'
 
-interface OrderForm {
-    orderFormId: string
-    items: Array<{
-        productId: string
-        price: number
-        quantity: number
-    }>
-}
-
-interface OrderFormContext {
-    orderForm: OrderForm
-    updateOrderForm: (data: Partial<OrderForm>) => void
-}
-
 const CartPriceUpdater: React.FC = () => {
-    const { orderForm, updateOrderForm } = useOrderForm() as OrderFormContext
+    const { orderForm, setOrderForm } = useOrderForm() as any
+    const orderFormId = orderForm?.id || orderForm?.orderFormId
     const { currentPrice } = usePriceContext()
 
     const updateCartItemPrice = async (itemIndex: number) => {
-        if (!orderForm?.orderFormId) return
-
+        if (!orderFormId) {
+            return
+        }
         try {
-            const response = await fetch(`/api/checkout/pub/orderForm/${orderForm.orderFormId}/items/${itemIndex}/price`, {
+            const response = await fetch(`/api/checkout/pub/orderForm/${orderFormId}/items/${itemIndex}/price`, {
                 method: 'PUT',
                 headers: {
                     'Content-Type': 'application/json',
                 },
                 body: JSON.stringify({
-                    price: currentPrice * 100,
+                    price: currentPrice * 100, // Convert to cents as per VTEX API requirement
                 }),
             })
 
@@ -39,21 +27,21 @@ const CartPriceUpdater: React.FC = () => {
             }
 
             const updatedOrderForm = await response.json()
-            updateOrderForm(updatedOrderForm)
+            setOrderForm(updatedOrderForm)
         } catch (error) {
             console.error('Failed to update cart price:', error)
         }
     }
 
     useEffect(() => {
-        if (orderForm?.items?.length > 0 && orderForm?.orderFormId) {
-            orderForm.items.forEach((item, index) => {
+        if (orderForm?.items?.length > 0 && orderFormId) {
+            orderForm.items.forEach((item: any, index: number) => {
                 if (item.price !== currentPrice * 100) {
                     updateCartItemPrice(index)
                 }
             })
         }
-    }, [orderForm?.items?.length, currentPrice, orderForm?.orderFormId])
+    }, [orderForm?.items?.length, currentPrice, orderFormId])
 
     return null
 }

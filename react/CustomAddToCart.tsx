@@ -4,11 +4,17 @@ import { useProduct } from 'vtex.product-context'
 import { usePriceContext } from './PriceContext'
 
 const CustomAddToCart: React.FC = () => {
-  const { orderForm } = useOrderForm() as any
+  const orderFormContext = useOrderForm() as any
+  const { orderForm, setOrderForm } = orderFormContext
   const orderFormId = orderForm?.id || orderForm?.orderFormId
   const productContext = useProduct() as any
   const { currentPrice } = usePriceContext()
   const [loading, setLoading] = useState(false)
+
+  // Log the orderFormContext to inspect available functions
+  React.useEffect(() => {
+    console.log('orderFormContext:', orderFormContext)
+  }, [orderFormContext])
 
   const handleAddToCart = async () => {
     setLoading(true)
@@ -48,8 +54,10 @@ const CustomAddToCart: React.FC = () => {
         body: JSON.stringify({ price: Math.round(currentPrice * 100) })
       })
       if (!overrideRes.ok) throw new Error('Failed to override price')
-      // 4. Trigger VTEX Minicart update
-      window.postMessage({ event: 'cartUpdated' }, window.origin)
+      // 4. Fetch the latest order form and update context
+      const refreshedOrderFormRes = await fetch(`/api/checkout/pub/orderForm/${orderFormId}`)
+      const refreshedOrderForm = await refreshedOrderFormRes.json()
+      setOrderForm(refreshedOrderForm)
     } catch (err) {
       console.error('Custom add to cart error:', err)
     }

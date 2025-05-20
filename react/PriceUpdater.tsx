@@ -1,6 +1,6 @@
 import React from 'react'
 import { usePriceContext } from './PriceContext'
-import CartPriceUpdater from './CartPriceUpdater'
+// import CartPriceUpdater from './CartPriceUpdater' // Removed to lock price at add-to-cart only
 
 interface PriceUpdaterComponent extends React.FC {
     schema: {
@@ -29,7 +29,7 @@ const PriceUpdater: PriceUpdaterComponent = () => {
 
     return (
         <>
-            <CartPriceUpdater />
+            {/* <CartPriceUpdater /> Removed to lock price at add-to-cart only */}
             <div className="price-updater" style={{
                 padding: '10px',
                 margin: '10px',

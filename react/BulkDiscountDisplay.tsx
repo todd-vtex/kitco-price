@@ -23,7 +23,6 @@ const BulkDiscountDisplay: BulkDiscountDisplayComponent = () => {
 
     const calculatePrice = (basePrice: number, paymentDiscount: number, tierDiscount: number): number => {
         if (typeof basePrice !== 'number' || basePrice <= 0) {
-            console.warn('Invalid base price for calculation:', basePrice)
             return 0
         }
         const totalDiscount = paymentDiscount + tierDiscount
@@ -79,24 +78,6 @@ const BulkDiscountDisplay: BulkDiscountDisplayComponent = () => {
     const wireCheck40Plus = calculatePrice(mcVisaPrice, WIRE_CHECK_DISCOUNT, TIER_40_DISCOUNT)
     
     const bitcoin10Plus = calculatePrice(mcVisaPrice, BITCOIN_DISCOUNT, TIER_10_DISCOUNT)
-
-    // Debug price calculations
-    React.useEffect(() => {
-        console.log('BulkDiscount - Price calculations:', {
-            currentPrice,
-            originalPrice,
-            calculatedPrices: {
-                mcVisa: mcVisaPrice,
-                wireCheck: wireCheckPrice,
-                bitcoin: bitcoinPrice,
-                mcVisa10Plus,
-                mcVisa40Plus,
-                wireCheck10Plus,
-                wireCheck40Plus,
-                bitcoin10Plus
-            }
-        })
-    }, [currentPrice, originalPrice])
 
     return (
         <div className="bulk-discount" style={{

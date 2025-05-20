@@ -2,6 +2,7 @@ import React from 'react'
 import { PriceProvider } from './PriceContext'
 import PriceUpdater from './PriceUpdater'
 import BulkDiscountDisplay from './BulkDiscountDisplay'
+import CustomAddToCart from './CustomAddToCart'
 
 interface DynamicPricingContainerComponent extends React.FC {
     schema: {
@@ -17,6 +18,7 @@ const DynamicPricingContainer: DynamicPricingContainerComponent = () => {
         <PriceProvider>
             <PriceUpdater />
             <BulkDiscountDisplay />
+            <CustomAddToCart />
         </PriceProvider>
     )
 }
